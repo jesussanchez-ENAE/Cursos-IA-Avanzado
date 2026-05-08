@@ -6,6 +6,7 @@
     <title>La Fábrica de Agentes | ENAE Business School</title>
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         /* Specific section styles */
         .hero {
@@ -96,6 +97,116 @@
             left: 0;
             color: var(--accent-color);
             font-family: var(--font-mono);
+        }
+
+        /* Comparativa Section Styles */
+        .step-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 1.5rem;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 0.75rem;
+            transition: var(--transition);
+        }
+
+        .step-card:hover {
+            border-color: rgba(168, 23, 48, 0.3);
+            transform: translateY(-1px);
+            background: rgba(168, 23, 48, 0.02);
+        }
+
+        .step-card.teal {
+            background: rgba(29, 158, 117, 0.01);
+            border-color: rgba(29, 158, 117, 0.08);
+        }
+
+        .step-card.teal:hover {
+            border-color: rgba(29, 158, 117, 0.3);
+            transform: translateY(-1px);
+            background: rgba(29, 158, 117, 0.03);
+        }
+
+        .step-connector {
+            width: 1px;
+            height: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            margin: 0 auto;
+        }
+
+        .step-connector.teal {
+            background: rgba(29, 158, 117, 0.15);
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 6px;
+            transform-origin: left;
+            animation: barIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+
+        @keyframes barIn {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+
+        /* Footer Custom Styles */
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-social a {
+            color: rgba(255, 255, 255, 0.6);
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-social a svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2px;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            color: #ffffff;
+            border-color: rgba(168, 23, 48, 0.4);
+            background: rgba(168, 23, 48, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(168, 23, 48, 0.3);
+        }
+
+        .footer-links {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.15);
+            font-family: var(--font-mono);
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #666;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
         }
     </style>
 </head>
@@ -232,6 +343,153 @@
                     <p style="font-size:10px;color:var(--color-text-secondary);margin:1.5rem 0 0;border-top:1px solid rgba(255,255,255,0.05);padding-top:0.75rem; font-family: var(--font-mono);">Fuentes: WEF Future of Jobs Report 2025 · McKinsey Global Institute · PwC Global Workforce. Estimaciones promediadas.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="comparativa" style="background: #050505; border-top: 1px solid rgba(255,255,255,0.05); position: relative;">
+        <div class="parallax-bg" style="background-image: url('./Links/src/Recurso 2.svg');"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <!-- Header de la sección -->
+            <div style="margin-bottom: 5rem; text-align: left;">
+                <p style="font-family: var(--font-mono); color: var(--accent-color); font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1.5rem; text-transform: uppercase;">EFICIENCIA OPERATIVA · CASO REAL</p>
+                <h2 style="font-size: 3.5rem; line-height: 1.1;">Flujo de trabajo <br><span class="text-gradient">Con IA vs Sin IA</span></h2>
+            </div>
+
+            <!-- Bento Grid de Comparativa de Columnas -->
+            <div class="bento-grid" style="margin-bottom: 2.5rem;">
+                <!-- Columna: Sin IA -->
+                <div class="bento-card" style="grid-column: span 6; display: flex; flex-direction: column; justify-content: space-between; border-color: rgba(255, 255, 255, 0.03);">
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                           <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-color); box-shadow: 0 0 10px var(--accent-color);"></span>
+                           <span style="font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888;">PROCESO MANUAL (SIN IA)</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0;">
+                            <div class="step-card">
+                                <span style="font-size: 0.95rem; color: #fff; font-family: var(--font-body); font-weight: 400;">1. Recopilación de información</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #ff8e8e;">4 h</span>
+                            </div>
+                            <div class="step-connector"></div>
+                            <div class="step-card">
+                                <span style="font-size: 0.95rem; color: #fff; font-family: var(--font-body); font-weight: 400;">2. Limpieza de bases de datos</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #ff8e8e;">3 h</span>
+                            </div>
+                            <div class="step-connector"></div>
+                            <div class="step-card">
+                                <span style="font-size: 0.95rem; color: #fff; font-family: var(--font-body); font-weight: 400;">3. Análisis estadístico y lógica</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #ff8e8e;">5 h</span>
+                            </div>
+                            <div class="step-connector"></div>
+                            <div class="step-card">
+                                <span style="font-size: 0.95rem; color: #fff; font-family: var(--font-body); font-weight: 400;">4. Redacción de informe inicial</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #ff8e8e;">3 h</span>
+                            </div>
+                            <div class="step-connector"></div>
+                            <div class="step-card">
+                                <span style="font-size: 0.95rem; color: #fff; font-family: var(--font-body); font-weight: 400;">5. Revisión final y ajustes</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #ff8e8e;">2 h</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
+                        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: #666; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.1em;">Tiempo Total Manual</p>
+                        <p style="font-size: 3.5rem; font-weight: 900; line-height: 1; margin-bottom: 0.5rem; font-family: var(--font-heading); color: #fff;">17 <span style="font-size: 1.5rem; color: #666; font-weight: 400; font-family: var(--font-body);">horas</span></p>
+                        <p style="font-size: 0.9rem; color: #666; font-family: var(--font-body);">Lento · Repetitivo · Propenso a errores humanos</p>
+                    </div>
+                </div>
+
+                <!-- Columna: Con IA -->
+                <div class="bento-card" style="grid-column: span 6; display: flex; flex-direction: column; justify-content: space-between; border-color: rgba(29, 158, 117, 0.15); background: rgba(29, 158, 117, 0.01);">
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(29,158,117,0.1);">
+                            <span style="width: 8px; height: 8px; border-radius: 50%; background: #1D9E75; box-shadow: 0 0 10px #1D9E75;"></span>
+                            <span style="font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: #1D9E75;">PROCESO OPTIMIZADO (CON IA)</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0;">
+                            <div class="step-card teal">
+                                <span style="font-size: 0.95rem; color: #fff; font-family: var(--font-body); font-weight: 700;">1. Recopilación automatizada (n8n/Make)</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #1D9E75; font-weight: bold;">15 min</span>
+                            </div>
+                            <div class="step-connector teal"></div>
+                            <div class="step-card teal">
+                                <span style="font-size: 0.95rem; color: #fff; font-family: var(--font-body); font-weight: 700;">2. Limpieza con prompts cognitivos</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #1D9E75; font-weight: bold;">5 min</span>
+                            </div>
+                            <div class="step-connector teal"></div>
+                            <div class="step-card teal">
+                                <span style="font-size: 0.95rem; color: #fff; font-family: var(--font-body); font-weight: 700;">3. Análisis inteligente estructurado</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #1D9E75; font-weight: bold;">20 min</span>
+                            </div>
+                            <div class="step-connector teal"></div>
+                            <div class="step-card teal">
+                                <span style="font-size: 0.95rem; color: #fff; font-family: var(--font-body); font-weight: 700;">4. Generación de informes (Antigravity)</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #1D9E75; font-weight: bold;">10 min</span>
+                            </div>
+                            <div class="step-connector teal"></div>
+                            <div class="step-card teal">
+                                <span style="font-size: 0.95rem; color: #fff; font-family: var(--font-body); font-weight: 700;">5. Supervisión humana y aprobación</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #1D9E75; font-weight: bold;">10 min</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(29,158,117,0.1);">
+                        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: #1D9E75; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.1em; font-weight: bold;">Tiempo Total Aumentado</p>
+                        <p style="font-size: 3.5rem; font-weight: 900; line-height: 1; margin-bottom: 0.5rem; font-family: var(--font-heading); color: #1D9E75;">~1 <span style="font-size: 1.5rem; color: rgba(29,158,117,0.7); font-weight: 400; font-family: var(--font-body);">hora</span></p>
+                        <p style="font-size: 0.9rem; color: #aaa; font-family: var(--font-body);">Súper rápido · Escalable · Precisión total</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bento Grid de Progreso y Métricas Clave -->
+            <div class="bento-grid">
+                <!-- Comparativa de Barras -->
+                <div class="bento-card" style="grid-column: span 6; display: flex; flex-direction: column; justify-content: center; border-color: rgba(255, 255, 255, 0.03);">
+                    <p style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: #666; letter-spacing: 0.1em; margin-bottom: 2rem;">TIEMPO TOTAL REQUERIDO POR PROCESO</p>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                            <span style="font-size: 0.95rem; color: #aaa; font-family: var(--font-body);">Sin IA (Manual)</span>
+                            <span style="font-family: var(--font-mono); font-size: 0.95rem; color: #fff;">17 h</span>
+                        </div>
+                        <div style="height: 12px; background: rgba(255,255,255,0.02); border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); position: relative;">
+                            <div class="bar-fill" style="background: var(--accent-color); width: 100%; box-shadow: 0 0 15px var(--accent-glow);"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                            <span style="font-size: 0.95rem; color: #fff; font-family: var(--font-body); font-weight: bold;">Con IA (Aumentado)</span>
+                            <span style="font-family: var(--font-mono); font-size: 0.95rem; color: #1D9E75; font-weight: bold;">~1 h</span>
+                        </div>
+                        <div style="height: 12px; background: rgba(255,255,255,0.02); border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); position: relative;">
+                            <div class="bar-fill" style="background: #1D9E75; width: 5.9%; box-shadow: 0 0 15px rgba(29,158,117,0.3); animation-delay: .1s;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid de Métricas de Impacto -->
+                <div class="bento-card" style="grid-column: span 6; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding: 2.5rem; border-color: rgba(255, 255, 255, 0.03); align-items: center;">
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 1rem; padding: 2rem 1rem; height: 100%; transition: var(--transition);" onmouseover="this.style.borderColor='rgba(29, 158, 117, 0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.03)'">
+                        <p style="font-size: 3rem; font-weight: 900; color: #1D9E75; font-family: var(--font-heading); margin-bottom: 0.5rem; line-height: 1; letter-spacing: -0.05em;">94%</p>
+                        <p style="font-size: 0.75rem; color: #888; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.4;">Ahorro de<br>Tiempo</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 1rem; padding: 2rem 1rem; height: 100%; transition: var(--transition);" onmouseover="this.style.borderColor='rgba(29, 158, 117, 0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.03)'">
+                        <p style="font-size: 3rem; font-weight: 900; color: #1D9E75; font-family: var(--font-heading); margin-bottom: 0.5rem; line-height: 1; letter-spacing: -0.05em;">↓80%</p>
+                        <p style="font-size: 0.75rem; color: #888; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.4;">Errores<br>Humanos</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 1rem; padding: 2rem 1rem; height: 100%; transition: var(--transition);" onmouseover="this.style.borderColor='rgba(29, 158, 117, 0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.03)'">
+                        <p style="font-size: 3rem; font-weight: 900; color: #1D9E75; font-family: var(--font-heading); margin-bottom: 0.5rem; line-height: 1; letter-spacing: -0.05em;">∞</p>
+                        <p style="font-size: 0.75rem; color: #888; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.4;">Escalabilidad<br>Total</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer de estimación -->
+            <p style="font-size: 10px; color: #555; margin-top: 4rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem; font-family: var(--font-mono); text-align: left;">
+                * Estimaciones orientativas para un análisis típico de negocio. Los resultados reales varían según la complejidad del ecosistema de datos corporativos y el nivel de entrenamiento de los agentes inteligentes construidos en el programa.
+            </p>
         </div>
     </section>
 
@@ -472,10 +730,35 @@
         </div>
     </section>
 
-    <footer style="padding: 4rem 0; border-top: 1px solid var(--border-color); text-align: center;">
+    <footer style="padding: 6rem 0 4rem; border-top: 1px solid var(--border-color); text-align: center; background: #000;">
         <div class="container">
-            <img src="./Links/src/logo_enae.svg" alt="ENAE Business School" style="height: 40px; margin-bottom: 2rem; opacity: 0.8;">
-            <p style="color: #555; font-size: 0.8rem;">© 2026 ENAE Business School. Todos los derechos reservados.</p>
+            <img src="./Links/src/logo_enae.svg" alt="ENAE Business School" style="height: 42px; margin-bottom: 2.5rem; opacity: 0.8;">
+            
+            <div class="footer-social">
+                <a href="https://www.instagram.com/enaebusiness/#" target="_blank" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://x.com/ENAEbusiness?s=09" target="_blank" aria-label="Twitter / X">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/school/enae-business-school/" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="https://www.youtube.com/enaebusiness" target="_blank" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                </a>
+                <a href="https://www.facebook.com/enaebusiness" target="_blank" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+            </div>
+
+            <div class="footer-links">
+                <a href="https://www.enae.es/condiciones-legales" target="_blank">Aviso legal</a> |
+                <a href="https://www.enae.es/politica-cookies" target="_blank">Política de cookies</a> |
+                <a href="https://www.enae.es/politica-de-privacidad" target="_blank">Política de privacidad</a>
+            </div>
+
+            <p style="color: #444; font-size: 0.75rem; margin-top: 2rem; font-family: var(--font-mono);">© 2026 ENAE Business School. Todos los derechos reservados.</p>
         </div>
     </footer>
 
