@@ -12,9 +12,12 @@ window.addEventListener('scroll', () => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
 });
 
@@ -46,6 +49,43 @@ if (leadForm) {
         }, 1500);
     });
 }
+
+// Interactive Mouse-Tracking Card Glows
+const initMouseGlow = () => {
+    const cards = document.querySelectorAll('.bento-card, .glass');
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
+};
+
+// Interactive Vertical Timeline Accordion
+const initAccordion = () => {
+    const items = document.querySelectorAll('.accordion-item');
+    items.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        if (header) {
+            header.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                items.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                
+                // Toggle clicked item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
+};
 
 // Chart.js Initialization
 const initCharts = () => {
@@ -129,14 +169,14 @@ const initCharts = () => {
         const professions = [
             'Auxiliar administrativo',
             'Cajero bancario',
-            'Operador de entrada de datos',
+            'Operador de datos',
             'Diseñador gráfico básico',
             'Agente de seguros',
             'Contable básico',
             'Paralegal',
             'Analista financiero',
             'Periodista generalista',
-            'Especialista en marketing'
+            'Especialista marketing'
         ];
         const risks = [90, 87, 85, 77, 73, 70, 65, 58, 52, 44];
         const colors = risks.map(r =>
@@ -181,7 +221,7 @@ const initCharts = () => {
                     },
                     y: {
                         ticks: {
-                            font: { size: 12 },
+                            font: { size: 11 },
                             color: '#5F5E5A'
                         },
                         grid: { display: false }
@@ -192,12 +232,14 @@ const initCharts = () => {
     }
 };
 
-// Initialize everything
+// Initialize everything on load
 window.addEventListener('DOMContentLoaded', () => {
     initCharts();
+    initMouseGlow();
+    initAccordion();
     
-    // Observer for reveal animations
-    const observerOptions = { threshold: 0.1 };
+    // Observer for reveal-on-scroll animations
+    const observerOptions = { threshold: 0.05 };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -208,7 +250,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.glass, canvas, .calendar-day.active').forEach(el => {
+    document.querySelectorAll('.glass, .bento-card, canvas').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'all 0.6s ease-out';

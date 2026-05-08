@@ -51,6 +51,7 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     letter-spacing: -0.04em;
     font-weight: 900;
+    line-height: 1.1;
 }
 
 .container {
@@ -158,6 +159,30 @@ h1, h2, h3, h4 {
 .bento-card > * {
     position: relative;
     z-index: 2;
+}
+
+/* Tool card specific styling overrides (Light Theme for logos readability) */
+.tool-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.tool-card h3 {
+    color: #000000 !important;
+}
+
+.tool-card p {
+    color: #444444 !important;
+}
+
+.tool-card::before {
+    background: radial-gradient(800px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(168, 23, 48, 0.06), transparent 40%) !important;
+}
+
+.tool-card:hover {
+    border-color: rgba(168, 23, 48, 0.4) !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Vertical Timeline Accordion */

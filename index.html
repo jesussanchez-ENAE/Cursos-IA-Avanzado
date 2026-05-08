@@ -15,6 +15,7 @@
             background: linear-gradient(to right, rgba(10,10,10,0.9), rgba(10,10,10,0.5)), url('./Links/portrait-of-smiling-professional-young-man-in-suit-2026-01-05-06-28-34-utc.jpg');
             background-size: cover;
             background-position: center;
+            padding-top: 8rem;
         }
 
         .hero-content {
@@ -23,54 +24,29 @@
 
         .hero-form {
             flex: 0 0 400px;
-            padding: 2.5rem;
+            padding: 2rem 2.2rem;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.1rem;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
             font-family: var(--font-mono);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--secondary-accent);
         }
 
         .form-group input {
             width: 100%;
-            padding: 1rem;
+            padding: 0.8rem 1rem;
             background: var(--input-bg);
             border: 1px solid var(--border-color);
             color: white;
             border-radius: 0.5rem;
             font-family: var(--font-body);
-        }
-
-        .nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 1.5rem 0;
-            z-index: 100;
-            transition: var(--transition);
-        }
-
-        .nav.scrolled {
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-        }
-
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 40px;
         }
 
         .check-list {
@@ -82,7 +58,7 @@
             position: relative;
             padding-left: 2rem;
             margin-bottom: 1rem;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: #ccc;
         }
 
@@ -125,13 +101,14 @@
 </head>
 <body>
     <nav class="nav">
-        <div class="container nav-content">
+        <div class="nav-content">
             <div class="logo">
                 <img src="./Links/src/logo_enae.svg" alt="ENAE Business School Logo">
             </div>
-            <div class="nav-links">
-                <a href="#programa" class="btn" style="padding: 0.5rem 1rem;">Programa</a>
-                <a href="#registro" class="btn btn-primary">Solicita Información</a>
+            <div class="nav-links" style="display: flex; align-items: center;">
+                <a href="#riesgo" style="font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-right: 2rem;">Impacto</a>
+                <a href="#programa" style="font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-right: 2rem;">Programa</a>
+                <a href="#registro" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.75rem;">Solicita Info</a>
             </div>
         </div>
     </nav>
@@ -158,8 +135,8 @@
                     </a>
                 </div>
             </div>
-            <div id="registro" class="hero-form glass" style="padding: 3.5rem; border: 1px solid rgba(168,23,48,0.1); box-shadow: 0 40px 100px rgba(0,0,0,0.8);">
-                <h3 style="margin-bottom: 2rem; text-align: left; font-size: 1.5rem;">Solicita <br><span style="color: var(--accent-color);">Información</span></h3>
+            <div id="registro" class="hero-form glass" style="padding: 2.2rem 2.5rem; border: 1px solid rgba(168,23,48,0.1); box-shadow: 0 40px 100px rgba(0,0,0,0.8);">
+                <h3 style="margin-bottom: 1.2rem; text-align: left; font-size: 1.5rem; line-height: 1;">Solicita <br><span style="color: var(--accent-color);">Información</span></h3>
                 <form id="lead-form">
                     <div class="form-group">
                         <label>NOMBRE COMPLETO</label>
@@ -173,86 +150,87 @@
                         <label>CARGO / RESPONSABILIDAD</label>
                         <input type="text" placeholder="Director de Innovación">
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 0.5rem; margin-top: 1rem;">Unirme a la Revolución</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 0.5rem; margin-top: 1rem; padding: 0.9rem;">Unirme a la Revolución</button>
                 </form>
-                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-                    <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #aaa; text-transform: uppercase;">Programa Bonificable por</span>
-                    <img src="./Links/src/logo_fundae.svg" alt="Fundae" style="height: 25px; opacity: 0.8;">
+                <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; align-items: center; gap: 0.3rem;">
+                    <span style="font-family: var(--font-mono); font-size: 0.65rem; color: #aaa; text-transform: uppercase;">Programa Bonificable por</span>
+                    <img src="./Links/src/logo_fundae.svg" alt="Fundae" style="height: 20px; opacity: 0.8;">
                 </div>
-                <p style="font-size: 0.7rem; color: #444; margin-top: 1.5rem; text-align: center; font-family: var(--font-mono);">PLAZAS LIMITADAS POR CONVOCATORIA</p>
+                <p style="font-size: 0.7rem; color: #444; margin-top: 1.2rem; text-align: center; font-family: var(--font-mono);">PLAZAS LIMITADAS POR CONVOCATORIA</p>
             </div>
         </div>
     </header>
 
-    <section id="intro" style="background: #000; padding: 8rem 0;">
+    <section id="riesgo" style="background: linear-gradient(to bottom, #000000, #050505); padding: 10rem 0;">
         <div class="parallax-bg" style="background-image: url('./Links/src/Recurso 2.svg');"></div>
-        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; position: relative; z-index: 1;">
-            <div>
-                <h2 style="font-size: 2.5rem; line-height: 1.2; margin-bottom: 2rem;">La IA ya está transformando <span class="text-gradient">empresas y procesos</span></h2>
-                <p style="color: #888; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                    Automatizando procesos y sustituyendo tareas repetitivas a un ritmo sin precedentes.
-                </p>
-                <p style="color: #aaa; font-size: 1.1rem; line-height: 1.8;">
-                    Quedarse atrás significa perder competitividad frente a empresas que ya trabajan con automatización, agentes inteligentes y herramientas propias.
-                </p>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="margin-bottom: 5rem; text-align: left;">
+                <p style="font-family: var(--font-mono); color: var(--accent-color); font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1.5rem;">LA REALIDAD DEL MERCADO</p>
+                <h2 style="font-size: 3.5rem; line-height: 1;">El Impacto de la <br><span class="text-gradient">Automatización</span></h2>
             </div>
-            <div class="glass" style="padding: 3rem;">
-                <h3 style="margin-bottom: 2rem; font-size: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">En este programa aprenderás a:</h3>
-                <ul class="check-list">
-                    <li>Crear aplicaciones con IA sin escribir código</li>
-                    <li>Automatizar procesos de negocio</li>
-                    <li>Diseñar agentes inteligentes para atención y ventas</li>
-                    <li>Conectar la IA con documentos y conocimiento interno</li>
-                    <li>Implementar IA real en tu empresa</li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
-    <section id="riesgo" style="background: linear-gradient(to bottom, #000000, #050505); padding-top: 4rem;">
-        <div class="container">
-            <h2 class="sr-only">Gráfica de progresión: empleos en riesgo de obsolescencia por la IA entre 2024 y 2035, desglosado por profesión y por el nivel de riesgo acumulado global.</h2>
+            <div class="bento-grid">
+                <!-- Market narrative -->
+                <div class="bento-card" style="grid-column: span 7; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-size: 2.2rem; line-height: 1.1; margin-bottom: 1.5rem;">La IA ya está transformando <span class="text-gradient">empresas y procesos</span></h3>
+                    <p style="color: #888; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        La inteligencia artificial está automatizando operaciones complejas y sustituyendo tareas repetitivas a un ritmo sin precedentes.
+                    </p>
+                    <p style="color: #aaa; font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                        Quedarse atrás significa perder competitividad frente a empresas que ya trabajan con automatización, agentes inteligentes y herramientas de software interno personalizadas.
+                    </p>
+                </div>
 
-            <div style="padding: 1.5rem 0 0;">
-                <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:4px; flex-wrap:wrap; gap:8px;">
-                    <div>
-                        <p style="font-size:13px; color:var(--color-text-secondary); margin:0;">Porcentaje estimado de puestos en riesgo de obsolescencia si no se adopta IA</p>
+                <!-- Learning List -->
+                <div class="bento-card" style="grid-column: span 5; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.3rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.8rem; font-family: var(--font-mono); color: var(--accent-color);">EN ESTE PROGRAMA APRENDERÁS A:</h3>
+                    <ul class="check-list">
+                        <li>Crear aplicaciones con IA sin escribir código</li>
+                        <li>Automatizar procesos de negocio clave</li>
+                        <li>Diseñar agentes inteligentes para atención y ventas</li>
+                        <li>Conectar la IA con documentos y conocimiento interno</li>
+                        <li>Implementar IA real en tus operaciones</li>
+                    </ul>
+                </div>
+
+                <!-- Timeline Chart.js -->
+                <div class="bento-card" style="grid-column: span 8; min-height: 380px;">
+                    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:1.5rem; flex-wrap:wrap; gap:8px;">
+                        <h4 style="font-size: 0.9rem; font-family: var(--font-mono); color: white; margin: 0;">Puestos en riesgo de obsolescencia (2024-2035)</h4>
+                        <div style="display:flex; gap:16px; font-size:11px; color:var(--color-text-secondary);">
+                            <span style="display:flex;align-items:center;gap:5px;"><span style="width:16px;height:3px;background:#a81730;display:inline-block;border-radius:2px;"></span>Sin IA</span>
+                            <span style="display:flex;align-items:center;gap:5px;"><span style="width:16px;height:3px;background:#1D9E75;display:inline-block;border-radius:2px;border:1px dashed #1D9E75;"></span>Con IA</span>
+                        </div>
                     </div>
-                    <div style="display:flex; gap:16px; font-size:12px; color:var(--color-text-secondary); flex-wrap:wrap;">
-                        <span style="display:flex;align-items:center;gap:5px;"><span style="width:22px;height:3px;background:#a81730;display:inline-block;border-radius:2px;"></span>Sin IA</span>
-                        <span style="display:flex;align-items:center;gap:5px;"><span style="width:22px;height:3px;background:#1D9E75;display:inline-block;border-radius:2px;border:1px dashed #1D9E75;"></span>Con IA adoptada</span>
+                    <div style="position:relative; width:100%; height:260px;">
+                        <canvas id="lineChart" role="img" aria-label="Línea de tiempo de riesgo de obsolescencia"></canvas>
                     </div>
                 </div>
 
-                <div style="position:relative;width:100%;height:300px;">
-                    <canvas id="lineChart" role="img" aria-label="Línea de tiempo 2024-2035 que muestra el porcentaje de empleos en riesgo global. Sin IA pasa del 18% al 62%. Con IA adoptada se estabiliza en torno al 12%.">Sin IA: de 18% en 2024 a 62% en 2035. Con IA adoptada: de 8% en 2024 a 12% en 2035.</canvas>
-                </div>
-
-                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px; margin:1.5rem 0 0.5rem;">
-                    <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.85rem 1rem;">
-                        <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px;">Empleos eliminados <span style="font-size:10px;">(2030)</span></p>
-                        <p style="font-size:22px;font-weight:500;margin:0;color:var(--color-text-primary);">92M</p>
+                <!-- Stats Grid (merged visually inside the bento) -->
+                <div class="bento-card" style="grid-column: span 4; display: grid; grid-template-columns: 1fr; gap: 1rem; padding: 1.5rem;">
+                    <div style="background: rgba(255, 255, 255, 0.02); border-radius: var(--border-radius-md); padding: 1rem 1.5rem; border: 1px solid rgba(255,255,255,0.02);">
+                        <p style="font-size: 10px; color: var(--color-text-secondary); margin-bottom: 2px; font-family: var(--font-mono);">Empleos eliminados (2030)</p>
+                        <p style="font-size: 24px; font-weight: 900; color: white;">92M</p>
                     </div>
-                    <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.85rem 1rem;">
-                        <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px;">Trabajadores deben reconvertirse</p>
-                        <p style="font-size:22px;font-weight:500;margin:0;color:var(--color-text-primary);">375M</p>
+                    <div style="background: rgba(255, 255, 255, 0.02); border-radius: var(--border-radius-md); padding: 1rem 1.5rem; border: 1px solid rgba(255,255,255,0.02);">
+                        <p style="font-size: 10px; color: var(--color-text-secondary); margin-bottom: 2px; font-family: var(--font-mono);">Trabajadores deben reconvertirse</p>
+                        <p style="font-size: 24px; font-weight: 900; color: white;">375M</p>
                     </div>
-                    <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.85rem 1rem;">
-                        <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px;">Habilidades obsoletas en 2030</p>
-                        <p style="font-size:22px;font-weight:500;margin:0;color:var(--color-text-primary);">39%</p>
-                    </div>
-                    <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.85rem 1rem;">
-                        <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px;">Sin formación adecuada</p>
-                        <p style="font-size:22px;font-weight:500;margin:0;color:var(--color-text-primary);">1 de 10</p>
+                    <div style="background: rgba(255, 255, 255, 0.02); border-radius: var(--border-radius-md); padding: 1rem 1.5rem; border: 1px solid rgba(255,255,255,0.02);">
+                        <p style="font-size: 10px; color: var(--color-text-secondary); margin-bottom: 2px; font-family: var(--font-mono);">Habilidades obsoletas en 2030</p>
+                        <p style="font-size: 24px; font-weight: 900; color: white;">39%</p>
                     </div>
                 </div>
 
-                <p style="font-size:13px;font-weight:500;color:var(--color-text-primary);margin:1.5rem 0 0.5rem;">Riesgo por profesión en 2030 (sin adaptación a IA)</p>
-                <div style="position:relative;width:100%;height:420px;">
-                    <canvas id="barChart" role="img" aria-label="Gráfico de barras horizontales con el porcentaje de riesgo de automatización por profesión. Auxiliar administrativo 90%, cajero bancario 87%, operador de datos 85%, diseñador gráfico básico 77%, agente de seguros 73%, contable básico 70%, paralelegal 65%, analista financiero 58%, periodista básico 52%, especialista en marketing 44%.">Auxiliar administrativo 90%, cajero bancario 87%, operador de datos 85%, diseñador gráfico 77%, agente de seguros 73%, contable básico 70%, paralegal 65%, analista financiero 58%, periodista 52%, especialista en marketing 44%.</canvas>
+                <!-- Professional Risk Chart.js -->
+                <div class="bento-card" style="grid-column: span 12; min-height: 440px;">
+                    <h4 style="font-size: 0.9rem; font-family: var(--font-mono); color: white; margin-bottom: 2rem;">Porcentaje de riesgo de automatización por profesión (2030)</h4>
+                    <div style="position:relative; width:100%; height:320px;">
+                        <canvas id="barChart" role="img" aria-label="Riesgo de automatización por profesión"></canvas>
+                    </div>
+                    <p style="font-size:10px;color:var(--color-text-secondary);margin:1.5rem 0 0;border-top:1px solid rgba(255,255,255,0.05);padding-top:0.75rem; font-family: var(--font-mono);">Fuentes: WEF Future of Jobs Report 2025 · McKinsey Global Institute · PwC Global Workforce. Estimaciones promediadas.</p>
                 </div>
-
-                <p style="font-size:11px;color:var(--color-text-secondary);margin:0.75rem 0 0;border-top:0.5px solid var(--color-border-tertiary);padding-top:0.75rem;">Fuentes: WEF Future of Jobs Report 2025 · McKinsey Global Institute · Goldman Sachs · PwC Global Workforce 2025. Proyecciones estimadas.</p>
             </div>
         </div>
     </section>
@@ -260,86 +238,208 @@
     <section id="programa" style="position: relative;">
         <div class="parallax-bg" style="background-image: url('./Links/src/Recurso 3.svg');"></div>
         <div style="position: absolute; top: -10%; left: -10%; width: 40%; height: 40%; background: radial-gradient(circle, rgba(168,23,48,0.03), transparent); pointer-events: none;"></div>
-        <div class="container" style="position: relative; z-index: 1;">
-            <div style="margin-bottom: 6rem; text-align: left;">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="margin-bottom: 5rem; text-align: left;">
                 <p style="font-family: var(--font-mono); color: var(--accent-color); font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1.5rem;">¿QUÉ APRENDERÁS?</p>
                 <h2 style="font-size: 3.5rem; line-height: 1;">Contenido del <br><span class="text-gradient">Programa</span></h2>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                <div class="glass" style="padding: 3rem; transition: var(--transition); cursor: pointer;" onmouseover="this.style.borderColor='var(--accent-color)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'">
-                    <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #444; margin-bottom: 2rem; display: block;">3.1 // GOOGLE ANTIGRAVITY</span>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Software con IA</h3>
-                    <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">Aprende a crear herramientas y aplicaciones mediante instrucciones a IA. Todo sin programar.</p>
-                    <ul class="program-list">
-                        <li>Microapps internas</li>
-                        <li>Dashboards interactivos</li>
-                        <li>Landing pages completas</li>
-                        <li>Herramientas para equipos</li>
-                        <li>Automatizaciones rápidas</li>
-                    </ul>
+            <div class="accordion">
+                <!-- Item 1 -->
+                <div class="accordion-item active" data-index="0">
+                    <div class="accordion-header">
+                        <h3 class="accordion-trigger"><span class="num">3.1 //</span> Software con IA — Google Antigravity</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <div>
+                                <p style="color: #888; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                                    Aprende a crear herramientas, aplicaciones y tableros interactivos mediante instrucciones lógicas dadas a una inteligencia artificial.
+                                </p>
+                                <p style="color: #aaa; font-size: 1.1rem; line-height: 1.8;">
+                                    Olvídate del código tradicional y crea de forma ágil soluciones internas seguras y escalables para tu equipo o clientes, todo de forma totalmente visual y sin programar.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 0.9rem; color: white; margin-bottom: 1.2rem; font-family: var(--font-mono);">PROYECTOS QUE CONSTRUIRÁS:</h4>
+                                <ul class="program-list">
+                                    <li>Microapps de consumo interno para tu empresa</li>
+                                    <li>Dashboards y analíticas de datos en tiempo real</li>
+                                    <li>Landing pages completas optimizadas para captación</li>
+                                    <li>Herramientas internas para optimización de flujos de trabajo</li>
+                                    <li>Automatizaciones de procesos repetitivos automatizados</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="glass" style="padding: 3rem; transition: var(--transition); cursor: pointer;" onmouseover="this.style.borderColor='var(--accent-color)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'">
-                    <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #444; margin-bottom: 2rem; display: block;">3.2 // COPILOT STUDIO</span>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Agentes de Marketing</h3>
-                    <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">Diseña asistentes inteligentes capaces de trabajar 24/7 de forma autónoma.</p>
-                    <ul class="program-list">
-                        <li>Crear chatbots para web y WhatsApp</li>
-                        <li>Captar y cualificar leads</li>
-                        <li>Automatizar respuestas</li>
-                        <li>Conectar documentos de empresa</li>
-                        <li>Configurar respuestas seguras y moderadas</li>
-                    </ul>
+
+                <!-- Item 2 -->
+                <div class="accordion-item" data-index="1">
+                    <div class="accordion-header">
+                        <h3 class="accordion-trigger"><span class="num">3.2 //</span> Agentes de Marketing — Copilot Studio</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <div>
+                                <p style="color: #888; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                                    Diseña y entrena asistentes virtuales inteligentes capaces de operar en canales de mensajería las 24 horas del día.
+                                </p>
+                                <p style="color: #aaa; font-size: 1.1rem; line-height: 1.8;">
+                                    Conecta la IA con tus bases de datos corporativas para calificar leads, automatizar respuestas complejas y cerrar ventas de forma segura y controlada.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 0.9rem; color: white; margin-bottom: 1.2rem; font-family: var(--font-mono);">HABILIDADES CLAVE:</h4>
+                                <ul class="program-list">
+                                    <li>Crear chatbots conversacionales para web y WhatsApp</li>
+                                    <li>Diseñar flujos de captación y cualificación de leads automáticos</li>
+                                    <li>Automatizar la atención de solicitudes de clientes frecuentes</li>
+                                    <li>Conectar con total seguridad tus documentos corporativos</li>
+                                    <li>Configurar filtros de moderación y respuestas seguras</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="glass" style="padding: 3rem; transition: var(--transition); cursor: pointer;" onmouseover="this.style.borderColor='var(--accent-color)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'">
-                    <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #444; margin-bottom: 2rem; display: block;">3.3 // FLOWISE</span>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Cerebros Visuales</h3>
-                    <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">Construye sistemas de IA visuales avanzados conectados directamente a tu negocio.</p>
-                    <ul class="program-list">
-                        <li>Flujos visuales Drag & Drop</li>
-                        <li>Chatbots con memoria</li>
-                        <li>Sistemas RAG conectados a documentos</li>
-                        <li>Bases de conocimiento propias</li>
-                        <li>Agentes inteligentes más avanzados</li>
-                    </ul>
+
+                <!-- Item 3 -->
+                <div class="accordion-item" data-index="2">
+                    <div class="accordion-header">
+                        <h3 class="accordion-trigger"><span class="num">3.3 //</span> Cerebros Visuales — Flowise</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <div>
+                                <p style="color: #888; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                                    Construye arquitecturas avanzadas de inteligencia artificial conectando bloques de lógica visuales mediante sistemas Drag & Drop.
+                                </p>
+                                <p style="color: #aaa; font-size: 1.1rem; line-height: 1.8;">
+                                    Une modelos de lenguaje, bases vectoriales y herramientas de terceros para crear sistemas RAG con memoria persistente y procesos lógicos automatizados.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 0.9rem; color: white; margin-bottom: 1.2rem; font-family: var(--font-mono);">APLICACIONES QUE DESARROLLARÁS:</h4>
+                                <ul class="program-list">
+                                    <li>Flujos avanzados Drag & Drop mediante nodos lógicos</li>
+                                    <li>Asistentes virtuales con gestión de memoria avanzada</li>
+                                    <li>Sistemas RAG conectados a tus documentos de negocio</li>
+                                    <li>Bases de conocimiento dinámicas e hiper-personalizadas</li>
+                                    <li>Agentes inteligentes integrados con APIs de terceros</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="audiencia" style="background: #050505; padding: 8rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+    <section id="herramientas" style="background: #000; padding: 10rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <p style="font-family: var(--font-mono); color: var(--accent-color); font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1.5rem;">ECOSISTEMA TECNOLÓGICO</p>
+                <h2 style="font-size: 3rem; line-height: 1.2;">Herramientas que <span class="text-gradient">dominarás</span></h2>
+                <p style="color: #666; max-width: 600px; margin: 1.5rem auto 0; font-size: 1.05rem;">
+                    Aprende a orquestar el stack de herramientas líderes en automatización y desarrollo con IA sin escribir código.
+                </p>
+            </div>
+            
+            <div class="bento-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <!-- Tool 1 -->
+                <div class="bento-card tool-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start;">
+                    <img src="./Links/Google_Antigravity_Logo.png" alt="Google Antigravity Logo" style="height: 38px; width: auto; object-fit: contain; margin-bottom: 0.5rem;">
+                    <h3 style="font-size: 1.2rem; margin: 0; font-family: var(--font-heading);">Google Antigravity</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin: 0;">Plataforma avanzada de creación y despliegue de software y microapps internas guiada por instrucciones en lenguaje natural.</p>
+                </div>
+
+                <!-- Tool 2 -->
+                <div class="bento-card tool-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start;">
+                    <img src="./Links/microsoft-copilot-logo.svg" alt="Microsoft Copilot Logo" style="height: 38px; width: auto; object-fit: contain; margin-bottom: 0.5rem;">
+                    <h3 style="font-size: 1.2rem; margin: 0; font-family: var(--font-heading);">Copilot Studio</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin: 0;">Entorno empresarial de Microsoft para estructurar agentes de marketing autónomos, integrables en WhatsApp y webs corporativas.</p>
+                </div>
+
+                <!-- Tool 3 -->
+                <div class="bento-card tool-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start;">
+                    <img src="./Links/logo-flowise.png" alt="Flowise Logo" style="height: 38px; width: auto; object-fit: contain; margin-bottom: 0.5rem;">
+                    <h3 style="font-size: 1.2rem; margin: 0; font-family: var(--font-heading);">Flowise AI</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin: 0;">Orquestador visual Drag & Drop para conectar LLMs con bases vectoriales, APIs y construir flujos cognitivos de memoria semántica.</p>
+                </div>
+
+                <!-- Tool 4 -->
+                <div class="bento-card tool-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start;">
+                    <div style="font-size: 2.2rem; line-height: 1; margin-bottom: 0.2rem;">⚡</div>
+                    <h3 style="font-size: 1.2rem; margin: 0; font-family: var(--font-heading);">n8n / Make</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin: 0;">Motores de automatización y orquestación para interconectar aplicaciones, sincronizar bases de datos y desencadenar agentes.</p>
+                </div>
+
+                <!-- Tool 5 -->
+                <div class="bento-card tool-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start;">
+                    <div style="font-size: 2.2rem; line-height: 1; margin-bottom: 0.2rem;">🧠</div>
+                    <h3 style="font-size: 1.2rem; margin: 0; font-family: var(--font-heading);">LLMs de Vanguardia</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin: 0;">Integración profunda con los modelos más avanzados de la industria (GPT-4o, Claude 3.5 Sonnet, Llama 3) como motores cognitivos.</p>
+                </div>
+
+                <!-- Tool 6 -->
+                <div class="bento-card tool-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start;">
+                    <div style="font-size: 2.2rem; line-height: 1; margin-bottom: 0.2rem;">📁</div>
+                    <h3 style="font-size: 1.2rem; margin: 0; font-family: var(--font-heading);">Bases Vectoriales</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin: 0;">Uso de Pinecone y ChromaDB para almacenar índices de documentos y proveer memoria a largo plazo a tus agentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="audiencia" style="background: #050505; padding: 10rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
         <div class="parallax-bg" style="background-image: url('./Links/src/Recurso 4.svg');"></div>
-        <div class="container" style="position: relative; z-index: 1;">
-            <div style="text-align: center; margin-bottom: 4rem;">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <p style="font-family: var(--font-mono); color: var(--accent-color); font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1.5rem;">¿ES ESTO PARA TI?</p>
                 <h2 style="font-size: 3rem; line-height: 1.2;">Este curso es <span class="text-gradient">para ti si…</span></h2>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 900px; margin: 0 auto;">
-                <div class="glass" style="padding: 2.5rem; display: flex; align-items: flex-start; gap: 1.5rem;">
-                    <div style="color: var(--accent-color); font-size: 1.5rem;">✔</div>
-                    <p style="color: #ddd; font-size: 1.1rem; margin: 0;">Quieres aplicar IA de verdad en tu empresa para obtener resultados reales.</p>
+            <div class="bento-grid" style="max-width: 1000px; margin: 0 auto;">
+                <div class="bento-card" style="grid-column: span 6; display: flex; align-items: flex-start; gap: 1.5rem;">
+                    <div style="color: var(--accent-color); font-size: 1.5rem; line-height: 1; font-weight: 900;">✔</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; color: white; margin-bottom: 0.5rem; font-family: var(--font-heading);">Resultados reales</h4>
+                        <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin: 0;">Quieres aplicar IA de verdad en tu empresa para automatizar operaciones de forma práctica.</p>
+                    </div>
                 </div>
-                <div class="glass" style="padding: 2.5rem; display: flex; align-items: flex-start; gap: 1.5rem;">
-                    <div style="color: var(--accent-color); font-size: 1.5rem;">✔</div>
-                    <p style="color: #ddd; font-size: 1.1rem; margin: 0;">Buscas automatizar tareas, eliminar procesos manuales y ahorrar tiempo.</p>
+                <div class="bento-card" style="grid-column: span 6; display: flex; align-items: flex-start; gap: 1.5rem;">
+                    <div style="color: var(--accent-color); font-size: 1.5rem; line-height: 1; font-weight: 900;">✔</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; color: white; margin-bottom: 0.5rem; font-family: var(--font-heading);">Ahorro de recursos</h4>
+                        <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin: 0;">Buscas automatizar tareas, eliminar procesos manuales lentos y optimizar el tiempo de tu equipo.</p>
+                    </div>
                 </div>
-                <div class="glass" style="padding: 2.5rem; display: flex; align-items: flex-start; gap: 1.5rem;">
-                    <div style="color: var(--accent-color); font-size: 1.5rem;">✔</div>
-                    <p style="color: #ddd; font-size: 1.1rem; margin: 0;">Quieres crear soluciones propias sin depender constantemente de programadores.</p>
+                <div class="bento-card" style="grid-column: span 6; display: flex; align-items: flex-start; gap: 1.5rem;">
+                    <div style="color: var(--accent-color); font-size: 1.5rem; line-height: 1; font-weight: 900;">✔</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; color: white; margin-bottom: 0.5rem; font-family: var(--font-heading);">Autonomía tecnológica</h4>
+                        <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin: 0;">Quieres crear soluciones propias, webs y flujos inteligentes sin depender de programadores externos.</p>
+                    </div>
                 </div>
-                <div class="glass" style="padding: 2.5rem; display: flex; align-items: flex-start; gap: 1.5rem;">
-                    <div style="color: var(--accent-color); font-size: 1.5rem;">✔</div>
-                    <p style="color: #ddd; font-size: 1.1rem; margin: 0;">Necesitas adaptarte al nuevo entorno digital y liderar la innovación tecnológica.</p>
+                <div class="bento-card" style="grid-column: span 6; display: flex; align-items: flex-start; gap: 1.5rem;">
+                    <div style="color: var(--accent-color); font-size: 1.5rem; line-height: 1; font-weight: 900;">✔</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; color: white; margin-bottom: 0.5rem; font-family: var(--font-heading);">Liderazgo e Innovación</h4>
+                        <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin: 0;">Necesitas adaptarte de inmediato al nuevo entorno digital y liderar la transformación en tu sector.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="agenda" style="background: #000;">
-        <div class="container">
+    <section id="agenda" style="background: #000; padding: 12rem 0;">
+        <div class="container" style="position: relative; z-index: 2;">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
                 <div>
                     <h2 style="font-size: 3rem; margin-bottom: 2rem;">Convocatoria <br><span class="text-gradient">Julio 2026</span></h2>
-                    <p style="color: #666; margin-bottom: 3rem;">Cuatro sesiones intensivas diseñadas para transformar tu perfil profesional. Cupos limitados para garantizar mentoría directa.</p>
+                    <p style="color: #666; margin-bottom: 3rem; font-size: 1.05rem; line-height: 1.7;">Cuatro sesiones intensivas diseñadas para transformar tu perfil profesional. Cupos estrictamente limitados para garantizar mentoría directa.</p>
                     <div style="display: flex; flex-direction: column; gap: 1rem;">
                         <div style="display: flex; justify-content: space-between; padding: 1.5rem; border-bottom: 1px solid #111;">
                             <span style="font-family: var(--font-mono); color: #444;">SESIÓN 01</span>
