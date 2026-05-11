@@ -49,7 +49,7 @@ body {
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
     text-transform: uppercase;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.015em;
     font-weight: 900;
     line-height: 1.1;
 }
@@ -220,14 +220,62 @@ h1, h2, h3, h4 {
     background: #ffffff !important;
     border: 1px solid rgba(0, 0, 0, 0.08) !important;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.tool-logo {
+    height: 40px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.tool-logo-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.tool-logo-row img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.tool-logo-row .separator {
+    color: rgba(0, 0, 0, 0.15);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.tool-emoji {
+    font-size: 2.2rem;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
 }
 
 .tool-card h3 {
     color: #000000 !important;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
 }
 
 .tool-card p {
     color: #444444 !important;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .tool-card::before {
