@@ -551,7 +551,12 @@
             <div class="logo">
                 <img src="./Links/src/logo_enae.svg" alt="ENAE Business School Logo">
             </div>
-            <div class="nav-links" style="display: flex; align-items: center;">
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+            <div class="nav-links">
                 <a href="#riesgo" style="font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-right: 2rem;">Impacto</a>
                 <a href="#programa" style="font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-right: 2rem;">Programa</a>
                 <a href="#registro" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.75rem;">Solicita Info</a>
@@ -560,7 +565,7 @@
     </nav>
 
     <header class="hero">
-        <div class="container" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 6rem; align-items: center;">
+        <div class="container hero-container">
             <div class="hero-content">
                 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
                     <span style="width: 40px; height: 1px; background: var(--accent-color);"></span>
@@ -574,7 +579,7 @@
                     Aprende a crear software y agentes con IA sin programar. <br>
                     <span style="color: white; font-weight: bold;">Un programa intensivo de ENAE Business School.</span>
                 </p>
-                <div style="display: flex; gap: 2rem; align-items: center;">
+                <div class="hero-buttons" style="display: flex; gap: 2rem; align-items: center;">
                     <a href="#registro" class="btn btn-primary">Solicita información ahora</a>
                     <a href="#riesgo" style="color: white; text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.1em; display: flex; align-items: center; gap: 0.5rem;">
                         VER IMPACTO <span style="color: var(--accent-color);">→</span>
@@ -805,7 +810,7 @@
                 </div>
 
                 <!-- Grid de Métricas de Impacto -->
-                <div class="bento-card" style="grid-column: span 6; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding: 2.5rem; border-color: rgba(255, 255, 255, 0.03); align-items: center;">
+                <div class="bento-card metric-bento-card" style="grid-column: span 6; display: grid; grid-template-columns: var(--metric-cols, repeat(3, 1fr)); gap: 1.5rem; padding: 2.5rem; border-color: rgba(255, 255, 255, 0.03); align-items: center;">
                     <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.07); border-radius: 1rem; padding: 2rem 1rem; height: 100%; transition: var(--transition);" onmouseover="this.style.borderColor='rgba(29, 158, 117, 0.35)'" onmouseout="this.style.borderColor='rgba(0,0,0,0.07)'">
                         <p style="font-size: 3rem; font-weight: 900; color: #1D9E75; font-family: var(--font-heading); margin-bottom: 0.5rem; line-height: 1; letter-spacing: -0.05em;">94%</p>
                         <p style="font-size: 0.75rem; color: #666; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.4;">Ahorro de<br>Tiempo</p>
@@ -1042,7 +1047,7 @@
             </div>
 
             <!-- Calendar + Detail layout -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; max-width: 1100px; margin: 0 auto;">
+            <div class="agenda-layout-grid">
 
                 <!-- Calendar -->
                 <div class="cal-wrap">
