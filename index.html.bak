@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Fábrica de Agentes | ENAE Business School</title>
     <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         /* Specific section styles */
@@ -48,6 +48,12 @@
             color: white;
             border-radius: 0.5rem;
             font-family: var(--font-body);
+        }
+
+        .fundae-badge img {
+            max-height: 28px;
+            width: auto;
+            margin-top: 0.5rem;
         }
 
         .check-list {
@@ -461,9 +467,10 @@
 
         /* Text-gradient override for light (use dark-to-mid gradient) */
         .section-light .text-gradient {
-            background: linear-gradient(to bottom, #1a1a1a 0%, #555 100%);
+            background: linear-gradient(to right, #1a1a1a 0%, #a81730 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 2px 6px rgba(168, 23, 48, 0.2));
         }
 
         /* Comparativa-specific overrides for light */
@@ -551,38 +558,43 @@
             <div class="logo">
                 <img src="./Links/src/logo_enae.svg" alt="ENAE Business School Logo">
             </div>
-            <div class="nav-links" style="display: flex; align-items: center;">
-                <a href="#riesgo" style="font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-right: 2rem;">Impacto</a>
-                <a href="#programa" style="font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-right: 2rem;">Programa</a>
-                <a href="#registro" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.75rem;">Solicita Info</a>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+            <div class="nav-links">
+                <a href="#riesgo" class="nav-link-item">Impacto</a>
+                <a href="#programa" class="nav-link-item">Programa</a>
+                <a href="#registro" class="btn btn-primary nav-btn">Solicita Info</a>
             </div>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="container" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 6rem; align-items: center;">
+        <div class="container hero-grid">
             <div class="hero-content">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
-                    <span style="width: 40px; height: 1px; background: var(--accent-color);"></span>
-                    <span style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--accent-color); letter-spacing: 0.2em;">PROGRAMA AVANZADO DE IA</span>
+                <div class="hero-label">
+                    <span class="line"></span>
+                    <span class="text">PROGRAMA AVANZADO DE IA</span>
                 </div>
-                <h1 style="font-size: 5.5rem; line-height: 0.9; margin-bottom: 2rem; font-weight: 900;">
+                <h1>
                     LA FÁBRICA <br>
                     <span class="text-gradient">DE AGENTES</span>
                 </h1>
-                <p style="font-size: 1.2rem; margin-bottom: 3.5rem; color: #aaa; max-width: 550px; line-height: 1.8;">
+                <p>
                     Aprende a crear software y agentes con IA sin programar. <br>
-                    <span style="color: white; font-weight: bold;">Un programa intensivo de ENAE Business School.</span>
+                    <span>Un programa intensivo de ENAE Business School.</span>
                 </p>
-                <div style="display: flex; gap: 2rem; align-items: center;">
+                <div class="hero-buttons">
                     <a href="#registro" class="btn btn-primary">Solicita información ahora</a>
-                    <a href="#riesgo" style="color: white; text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.1em; display: flex; align-items: center; gap: 0.5rem;">
-                        VER IMPACTO <span style="color: var(--accent-color);">→</span>
+                    <a href="#riesgo" class="hero-link">
+                        VER IMPACTO <span>→</span>
                     </a>
                 </div>
             </div>
-            <div id="registro" class="hero-form glass" style="padding: 2.2rem 2.5rem; border: 1px solid rgba(168,23,48,0.1); box-shadow: 0 40px 100px rgba(0,0,0,0.8);">
-                <h3 style="margin-bottom: 1.2rem; text-align: left; font-size: 1.5rem; line-height: 1;">Solicita <br><span style="color: var(--accent-color);">Información</span></h3>
+            <div id="registro" class="hero-form glass">
+                <h3>Solicita <br><span>Información</span></h3>
                 <form id="lead-form">
                     <div class="form-group">
                         <label>NOMBRE COMPLETO</label>
@@ -598,38 +610,38 @@
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 0.5rem; margin-top: 1rem; padding: 0.9rem;">Unirme a la Revolución</button>
                 </form>
-                <div style="margin-top: 1.5rem; padding: 1rem 1.4rem; border-radius: 0.75rem; background: linear-gradient(135deg, rgba(212,166,0,0.1), rgba(212,166,0,0.03)); border: 1px solid rgba(212,166,0,0.3); display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-                    <p style="font-family: var(--font-mono); font-size: 0.6rem; color: #c9a800; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700; margin: 0;">Programa Bonificable por</p>
-                    <img src="./Links/src/logo_fundae.svg" alt="Fundae" style="height: 24px; opacity: 1; filter: brightness(2) sepia(1) hue-rotate(5deg) saturate(2);">
+                <div class="fundae-badge">
+                    <p>Programa Bonificable por</p>
+                    <img src="./Links/src/logo_fundae.svg" alt="Fundae">
                 </div>
-                <p style="font-size: 0.7rem; color: #c9a800; margin-top: 1rem; text-align: center; font-family: var(--font-mono); font-weight: 700; letter-spacing: 0.1em;">⚠ PLAZAS LIMITADAS POR CONVOCATORIA</p>
+                <p class="plazas-limitadas">⚠ PLAZAS LIMITADAS POR CONVOCATORIA</p>
             </div>
         </div>
     </header>
 
-    <section id="riesgo" style="background: linear-gradient(to bottom, #000000, #050505); padding: 10rem 0;">
+    <section id="riesgo">
         <div class="parallax-bg" style="background-image: url('./Links/src/Recurso 2.svg');"></div>
-        <div class="container" style="position: relative; z-index: 2;">
-            <div style="margin-bottom: 5rem; text-align: left;">
-                <p style="font-family: var(--font-mono); color: var(--accent-color); font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1.5rem;">LA REALIDAD DEL MERCADO</p>
-                <h2 style="font-size: 3.5rem; line-height: 1;">El Impacto de la <br><span class="text-gradient">Automatización</span></h2>
+        <div class="container relative-container">
+            <div class="section-header">
+                <p class="subtitle">LA REALIDAD DEL MERCADO</p>
+                <h2>El Impacto de la <br><span class="text-gradient">Automatización</span></h2>
             </div>
 
             <div class="bento-grid">
                 <!-- Market narrative -->
-                <div class="bento-card" style="grid-column: span 7; display: flex; flex-direction: column; justify-content: center;">
-                    <h3 style="font-size: 2.2rem; line-height: 1.1; margin-bottom: 1.5rem;">La IA ya está transformando <span class="text-gradient">empresas y procesos</span></h3>
-                    <p style="color: #888; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                <div class="bento-card span-7 flex-center-y">
+                    <h3>La IA ya está transformando <span class="text-gradient">empresas y procesos</span></h3>
+                    <p class="bento-card-desc">
                         La inteligencia artificial está automatizando operaciones complejas y sustituyendo tareas repetitivas a un ritmo sin precedentes.
                     </p>
-                    <p style="color: #aaa; font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                    <p class="bento-card-desc secondary">
                         Quedarse atrás significa perder competitividad frente a empresas que ya trabajan con automatización, agentes inteligentes y herramientas de software interno personalizadas.
                     </p>
                 </div>
 
                 <!-- Learning List -->
-                <div class="bento-card" style="grid-column: span 5; display: flex; flex-direction: column; justify-content: center;">
-                    <h3 style="margin-bottom: 1.5rem; font-size: 1.3rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.8rem; font-family: var(--font-mono); color: var(--accent-color);">EN ESTE PROGRAMA APRENDERÁS A:</h3>
+                <div class="bento-card span-5 flex-center-y">
+                    <h3 class="bento-card-header">EN ESTE PROGRAMA APRENDERÁS A:</h3>
                     <ul class="check-list">
                         <li>Crear aplicaciones con IA sin escribir código</li>
                         <li>Automatizar procesos de negocio clave</li>
@@ -640,139 +652,139 @@
                 </div>
 
                 <!-- Timeline Chart.js -->
-                <div class="bento-card" style="grid-column: span 8; min-height: 380px;">
-                    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:1.5rem; flex-wrap:wrap; gap:8px;">
-                        <h4 style="font-size: 0.9rem; font-family: var(--font-mono); color: white; margin: 0;">Puestos en riesgo de obsolescencia (2024-2035)</h4>
-                        <div style="display:flex; gap:16px; font-size:11px; color:var(--color-text-secondary);">
-                            <span style="display:flex;align-items:center;gap:5px;"><span style="width:16px;height:3px;background:#a81730;display:inline-block;border-radius:2px;"></span>Sin IA</span>
-                            <span style="display:flex;align-items:center;gap:5px;"><span style="width:16px;height:3px;background:#1D9E75;display:inline-block;border-radius:2px;border:1px dashed #1D9E75;"></span>Con IA</span>
+                <div class="bento-card span-8 chart-card">
+                    <div class="chart-header">
+                        <h4>Puestos en riesgo de obsolescencia (2024-2035)</h4>
+                        <div class="chart-legend">
+                            <span><span class="bullet sin-ia"></span>Sin IA</span>
+                            <span><span class="bullet con-ia"></span>Con IA</span>
                         </div>
                     </div>
-                    <div style="position:relative; width:100%; height:260px;">
+                    <div class="chart-container">
                         <canvas id="lineChart" role="img" aria-label="Línea de tiempo de riesgo de obsolescencia"></canvas>
                     </div>
                 </div>
 
                 <!-- Stats Grid (merged visually inside the bento) -->
-                <div class="bento-card" style="grid-column: span 4; display: grid; grid-template-columns: 1fr; gap: 1rem; padding: 1.5rem;">
-                    <div style="background: rgba(255, 255, 255, 0.02); border-radius: var(--border-radius-md); padding: 1rem 1.5rem; border: 1px solid rgba(255,255,255,0.02);">
-                        <p style="font-size: 10px; color: var(--color-text-secondary); margin-bottom: 2px; font-family: var(--font-mono);">Empleos eliminados (2030)</p>
-                        <p style="font-size: 24px; font-weight: 900; color: white;">92M</p>
+                <div class="bento-card span-4 stats-container">
+                    <div class="stat-mini-card">
+                        <p class="label">Empleos eliminados (2030)</p>
+                        <p class="value">92M</p>
                     </div>
-                    <div style="background: rgba(255, 255, 255, 0.02); border-radius: var(--border-radius-md); padding: 1rem 1.5rem; border: 1px solid rgba(255,255,255,0.02);">
-                        <p style="font-size: 10px; color: var(--color-text-secondary); margin-bottom: 2px; font-family: var(--font-mono);">Trabajadores deben reconvertirse</p>
-                        <p style="font-size: 24px; font-weight: 900; color: white;">375M</p>
+                    <div class="stat-mini-card">
+                        <p class="label">Trabajadores deben reconvertirse</p>
+                        <p class="value">375M</p>
                     </div>
-                    <div style="background: rgba(255, 255, 255, 0.02); border-radius: var(--border-radius-md); padding: 1rem 1.5rem; border: 1px solid rgba(255,255,255,0.02);">
-                        <p style="font-size: 10px; color: var(--color-text-secondary); margin-bottom: 2px; font-family: var(--font-mono);">Habilidades obsoletas en 2030</p>
-                        <p style="font-size: 24px; font-weight: 900; color: white;">39%</p>
+                    <div class="stat-mini-card">
+                        <p class="label">Habilidades obsoletas en 2030</p>
+                        <p class="value">39%</p>
                     </div>
                 </div>
 
                 <!-- Professional Risk Chart.js -->
-                <div class="bento-card" style="grid-column: span 12; min-height: 440px;">
-                    <h4 style="font-size: 0.9rem; font-family: var(--font-mono); color: white; margin-bottom: 2rem;">Porcentaje de riesgo de automatización por profesión (2030)</h4>
-                    <div style="position:relative; width:100%; height:320px;">
+                <div class="bento-card span-12 chart-card tall-chart-card">
+                    <h4>Porcentaje de riesgo de automatización por profesión (2030)</h4>
+                    <div class="chart-container tall">
                         <canvas id="barChart" role="img" aria-label="Riesgo de automatización por profesión"></canvas>
                     </div>
-                    <p style="font-size:10px;color:var(--color-text-secondary);margin:1.5rem 0 0;border-top:1px solid rgba(255,255,255,0.05);padding-top:0.75rem; font-family: var(--font-mono);">Fuentes: WEF Future of Jobs Report 2025 · McKinsey Global Institute · PwC Global Workforce. Estimaciones promediadas.</p>
+                    <p class="chart-footer-note">Fuentes: WEF Future of Jobs Report 2025 · McKinsey Global Institute · PwC Global Workforce. Estimaciones promediadas.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="comparativa" class="section-light" style="background: #f2efe8; border-top: none; position: relative;">
+    <section id="comparativa" class="section-light">
         <div class="parallax-bg" style="background-image: url('./Links/src/Recurso 2.svg');"></div>
-        <div class="container" style="position: relative; z-index: 2;">
+        <div class="container relative-container">
             <!-- Header de la sección -->
-            <div style="margin-bottom: 5rem; text-align: left;">
-                <p style="font-family: var(--font-mono); color: var(--accent-color); font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1.5rem; text-transform: uppercase;">EFICIENCIA OPERATIVA · CASO REAL</p>
-                <h2 style="font-size: 3.5rem; line-height: 1.1;">Flujo de trabajo <br><span class="text-gradient">Con IA vs Sin IA</span></h2>
+            <div class="section-header">
+                <p class="subtitle">EFICIENCIA OPERATIVA · CASO REAL</p>
+                <h2>Flujo de trabajo <br><span class="text-gradient">Con IA vs Sin IA</span></h2>
             </div>
 
             <!-- Bento Grid de Comparativa de Columnas -->
-            <div class="bento-grid" style="margin-bottom: 2.5rem;">
+            <div class="bento-grid comparative-grid">
                 <!-- Columna: Sin IA -->
-                <div class="bento-card" style="grid-column: span 6; display: flex; flex-direction: column; justify-content: space-between; border-color: rgba(255, 255, 255, 0.03);">
+                <div class="bento-card span-6 comparative-column column-manual">
                     <div>
-                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.08);">
-                           <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-color); box-shadow: 0 0 10px var(--accent-color);"></span>
-                           <span style="font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888;">PROCESO MANUAL (SIN IA)</span>
+                        <div class="column-header">
+                           <span class="dot"></span>
+                           <span class="label">PROCESO MANUAL (SIN IA)</span>
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 0;">
+                        <div class="steps-container">
                             <div class="step-card">
-                                <span style="font-size: 0.95rem; color: #1a1a1a; font-family: var(--font-body); font-weight: 400;">1. Recopilación de información</span>
-                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-color);">4 h</span>
+                                <span>1. Recopilación de información</span>
+                                <span class="time-label">4 h</span>
                             </div>
                             <div class="step-connector"></div>
                             <div class="step-card">
-                                <span style="font-size: 0.95rem; color: #1a1a1a; font-family: var(--font-body); font-weight: 400;">2. Limpieza de bases de datos</span>
-                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-color);">3 h</span>
+                                <span>2. Limpieza de bases de datos</span>
+                                <span class="time-label">3 h</span>
                             </div>
                             <div class="step-connector"></div>
                             <div class="step-card">
-                                <span style="font-size: 0.95rem; color: #1a1a1a; font-family: var(--font-body); font-weight: 400;">3. Análisis estadístico y lógica</span>
-                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-color);">5 h</span>
+                                <span>3. Análisis estadístico y lógica</span>
+                                <span class="time-label">5 h</span>
                             </div>
                             <div class="step-connector"></div>
                             <div class="step-card">
-                                <span style="font-size: 0.95rem; color: #1a1a1a; font-family: var(--font-body); font-weight: 400;">4. Redacción de informe inicial</span>
-                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-color);">3 h</span>
+                                <span>4. Redacción de informe inicial</span>
+                                <span class="time-label">3 h</span>
                             </div>
                             <div class="step-connector"></div>
                             <div class="step-card">
-                                <span style="font-size: 0.95rem; color: #1a1a1a; font-family: var(--font-body); font-weight: 400;">5. Revisión final y ajustes</span>
-                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-color);">2 h</span>
+                                <span>5. Revisión final y ajustes</span>
+                                <span class="time-label">2 h</span>
                             </div>
                         </div>
                     </div>
                     
-                    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.08);">
-                        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: #666; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.1em;">Tiempo Total Manual</p>
-                        <p style="font-size: 3.5rem; font-weight: 900; line-height: 1; margin-bottom: 0.5rem; font-family: var(--font-heading); color: #1a1a1a;">17 <span style="font-size: 1.5rem; color: #777; font-weight: 400; font-family: var(--font-body);">horas</span></p>
-                        <p style="font-size: 0.9rem; color: #666; font-family: var(--font-body);">Lento · Repetitivo · Propenso a errores humanos</p>
+                    <div class="column-footer">
+                        <p class="label">Tiempo Total Manual</p>
+                        <p class="time">17 <span>horas</span></p>
+                        <p class="desc">Lento · Repetitivo · Propenso a errores humanos</p>
                     </div>
                 </div>
 
                 <!-- Columna: Con IA -->
-                <div class="bento-card" style="grid-column: span 6; display: flex; flex-direction: column; justify-content: space-between; border-color: rgba(29, 158, 117, 0.15); background: rgba(29, 158, 117, 0.01);">
+                <div class="bento-card span-6 comparative-column column-ia">
                     <div>
-                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(29,158,117,0.1);">
-                            <span style="width: 8px; height: 8px; border-radius: 50%; background: #1D9E75; box-shadow: 0 0 10px #1D9E75;"></span>
-                            <span style="font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: #1D9E75;">PROCESO OPTIMIZADO (CON IA)</span>
+                        <div class="column-header">
+                            <span class="dot teal"></span>
+                            <span class="label teal">PROCESO OPTIMIZADO (CON IA)</span>
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 0;">
+                        <div class="steps-container">
                             <div class="step-card teal">
-                                <span style="font-size: 0.95rem; color: #1a1a1a; font-family: var(--font-body); font-weight: 700;">1. Recopilación automatizada (n8n/Make)</span>
-                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #1D9E75; font-weight: bold;">15 min</span>
+                                <span class="bold-text">1. Recopilación automatizada (n8n/Make)</span>
+                                <span class="time-label teal">15 min</span>
                             </div>
                             <div class="step-connector teal"></div>
                             <div class="step-card teal">
-                                <span style="font-size: 0.95rem; color: #1a1a1a; font-family: var(--font-body); font-weight: 700;">2. Limpieza con prompts cognitivos</span>
-                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #1D9E75; font-weight: bold;">5 min</span>
+                                <span class="bold-text">2. Limpieza con prompts cognitivos</span>
+                                <span class="time-label teal">5 min</span>
                             </div>
                             <div class="step-connector teal"></div>
                             <div class="step-card teal">
-                                <span style="font-size: 0.95rem; color: #1a1a1a; font-family: var(--font-body); font-weight: 700;">3. Análisis inteligente estructurado</span>
-                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #1D9E75; font-weight: bold;">20 min</span>
+                                <span class="bold-text">3. Análisis inteligente estructurado</span>
+                                <span class="time-label teal">20 min</span>
                             </div>
                             <div class="step-connector teal"></div>
                             <div class="step-card teal">
-                                <span style="font-size: 0.95rem; color: #1a1a1a; font-family: var(--font-body); font-weight: 700;">4. Generación de informes (Antigravity)</span>
-                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #1D9E75; font-weight: bold;">10 min</span>
+                                <span class="bold-text">4. Generación de informes (Antigravity)</span>
+                                <span class="time-label teal">10 min</span>
                             </div>
                             <div class="step-connector teal"></div>
                             <div class="step-card teal">
-                                <span style="font-size: 0.95rem; color: #1a1a1a; font-family: var(--font-body); font-weight: 700;">5. Supervisión humana y aprobación</span>
-                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #1D9E75; font-weight: bold;">10 min</span>
+                                <span class="bold-text">5. Supervisión humana y aprobación</span>
+                                <span class="time-label teal">10 min</span>
                             </div>
                         </div>
                     </div>
 
-                    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(29,158,117,0.2);">
-                        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: #1D9E75; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.1em; font-weight: bold;">Tiempo Total Aumentado</p>
-                        <p style="font-size: 3.5rem; font-weight: 900; line-height: 1; margin-bottom: 0.5rem; font-family: var(--font-heading); color: #1D9E75;">~1 <span style="font-size: 1.5rem; color: rgba(29,158,117,0.7); font-weight: 400; font-family: var(--font-body);">hora</span></p>
-                        <p style="font-size: 0.9rem; color: #aaa; font-family: var(--font-body);">Súper rápido · Escalable · Precisión total</p>
+                    <div class="column-footer teal">
+                        <p class="label teal">Tiempo Total Aumentado</p>
+                        <p class="time teal">~1 <span class="teal">hora</span></p>
+                        <p class="desc teal">Súper rápido · Escalable · Precisión total</p>
                     </div>
                 </div>
             </div>
@@ -780,61 +792,59 @@
             <!-- Bento Grid de Progreso y Métricas Clave -->
             <div class="bento-grid">
                 <!-- Comparativa de Barras -->
-                <div class="bento-card" style="grid-column: span 6; display: flex; flex-direction: column; justify-content: center; border-color: rgba(255, 255, 255, 0.03);">
-                    <p style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: #666; letter-spacing: 0.1em; margin-bottom: 2rem;">TIEMPO TOTAL REQUERIDO POR PROCESO</p>
+                <div class="bento-card span-6 progress-card">
+                    <p class="progress-title">TIEMPO TOTAL REQUERIDO POR PROCESO</p>
                     
-                    <div style="margin-bottom: 2rem;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                            <span style="font-size: 0.95rem; color: #444; font-family: var(--font-body);">Sin IA (Manual)</span>
-                            <span style="font-family: var(--font-mono); font-size: 0.95rem; color: #1a1a1a;">17 h</span>
+                    <div class="progress-item">
+                        <div class="progress-label-row">
+                            <span>Sin IA (Manual)</span>
+                            <span class="value">17 h</span>
                         </div>
-                        <div style="height: 12px; background: rgba(0,0,0,0.07); border-radius: 6px; overflow: hidden; border: 1px solid rgba(0,0,0,0.1); position: relative;">
-                            <div class="bar-fill" style="background: var(--accent-color); width: 100%; box-shadow: 0 0 15px var(--accent-glow);"></div>
+                        <div class="progress-track">
+                            <div class="bar-fill red-bar" style="width: 100%;"></div>
                         </div>
                     </div>
 
-                    <div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                            <span style="font-size: 0.95rem; color: #1a1a1a; font-family: var(--font-body); font-weight: bold;">Con IA (Aumentado)</span>
-                            <span style="font-family: var(--font-mono); font-size: 0.95rem; color: #1D9E75; font-weight: bold;">~1 h</span>
+                    <div class="progress-item">
+                        <div class="progress-label-row bold-label">
+                            <span>Con IA (Aumentado)</span>
+                            <span class="value teal-value">~1 h</span>
                         </div>
-                        <div style="height: 12px; background: rgba(0,0,0,0.07); border-radius: 6px; overflow: hidden; border: 1px solid rgba(0,0,0,0.1); position: relative;">
-                            <div class="bar-fill" style="background: #1D9E75; width: 5.9%; box-shadow: 0 0 15px rgba(29,158,117,0.3); animation-delay: .1s;"></div>
+                        <div class="progress-track">
+                            <div class="bar-fill teal-bar" style="width: 5.9%;"></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Grid de Métricas de Impacto -->
-                <div class="bento-card" style="grid-column: span 6; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding: 2.5rem; border-color: rgba(255, 255, 255, 0.03); align-items: center;">
-                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.07); border-radius: 1rem; padding: 2rem 1rem; height: 100%; transition: var(--transition);" onmouseover="this.style.borderColor='rgba(29, 158, 117, 0.35)'" onmouseout="this.style.borderColor='rgba(0,0,0,0.07)'">
-                        <p style="font-size: 3rem; font-weight: 900; color: #1D9E75; font-family: var(--font-heading); margin-bottom: 0.5rem; line-height: 1; letter-spacing: -0.05em;">94%</p>
-                        <p style="font-size: 0.75rem; color: #666; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.4;">Ahorro de<br>Tiempo</p>
+                <div class="bento-card span-6 metrics-grid">
+                    <div class="metric-mini-card">
+                        <p class="val">94%</p>
+                        <p class="desc">Ahorro de<br>Tiempo</p>
                     </div>
-                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.07); border-radius: 1rem; padding: 2rem 1rem; height: 100%; transition: var(--transition);" onmouseover="this.style.borderColor='rgba(29, 158, 117, 0.35)'" onmouseout="this.style.borderColor='rgba(0,0,0,0.07)'">
-                        <p style="font-size: 3rem; font-weight: 900; color: #1D9E75; font-family: var(--font-heading); margin-bottom: 0.5rem; line-height: 1; letter-spacing: -0.05em;">↓80%</p>
-                        <p style="font-size: 0.75rem; color: #666; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.4;">Errores<br>Humanos</p>
+                    <div class="metric-mini-card">
+                        <p class="val">↓80%</p>
+                        <p class="desc">Errores<br>Humanos</p>
                     </div>
-                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.07); border-radius: 1rem; padding: 2rem 1rem; height: 100%; transition: var(--transition);" onmouseover="this.style.borderColor='rgba(29, 158, 117, 0.35)'" onmouseout="this.style.borderColor='rgba(0,0,0,0.07)'">
-                        <p style="font-size: 3rem; font-weight: 900; color: #1D9E75; font-family: var(--font-heading); margin-bottom: 0.5rem; line-height: 1; letter-spacing: -0.05em;">∞</p>
-                        <p style="font-size: 0.75rem; color: #666; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.4;">Escalabilidad<br>Total</p>
+                    <div class="metric-mini-card">
+                        <p class="val">∞</p>
+                        <p class="desc">Escalabilidad<br>Total</p>
                     </div>
                 </div>
             </div>
 
             <!-- Footer de estimación -->
-            <p style="font-size: 10px; color: #777; margin-top: 4rem; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1.5rem; font-family: var(--font-mono); text-align: left;">
-                * Estimaciones orientativas para un análisis típico de negocio. Los resultados reales varían según la complejidad del ecosistema de datos corporativos y el nivel de entrenamiento de los agentes inteligentes construidos en el programa.
-            </p>
-        </div>
+            <p class="estimation-footer">
+                * Estimaciones         </div>
     </section>
 
-    <section id="programa" style="position: relative;">
+    <section id="programa">
         <div class="parallax-bg" style="background-image: url('./Links/src/Recurso 3.svg');"></div>
-        <div style="position: absolute; top: -10%; left: -10%; width: 40%; height: 40%; background: radial-gradient(circle, rgba(168,23,48,0.03), transparent); pointer-events: none;"></div>
-        <div class="container" style="position: relative; z-index: 2;">
-            <div style="margin-bottom: 5rem; text-align: left;">
-                <p style="font-family: var(--font-mono); color: var(--accent-color); font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1.5rem;">¿QUÉ APRENDERÁS?</p>
-                <h2 style="font-size: 3.5rem; line-height: 1;">Contenido del <br><span class="text-gradient">Programa</span></h2>
+        <div class="radial-glow-program"></div>
+        <div class="container relative-container">
+            <div class="section-header">
+                <p class="subtitle">¿QUÉ APRENDERÁS?</p>
+                <h2>Contenido del <br><span class="text-gradient">Programa</span></h2>
             </div>
             
             <div class="accordion">
@@ -846,16 +856,16 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-inner">
-                            <div>
-                                <p style="color: #888; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                            <div class="accordion-left">
+                                <p class="desc">
                                     Aprende a crear herramientas, aplicaciones y tableros interactivos mediante instrucciones lógicas dadas a una inteligencia artificial.
                                 </p>
-                                <p style="color: #aaa; font-size: 1.1rem; line-height: 1.8;">
+                                <p class="desc secondary">
                                     Olvídate del código tradicional y crea de forma ágil soluciones internas seguras y escalables para tu equipo o clientes, todo de forma totalmente visual y sin programar.
                                 </p>
                             </div>
-                            <div>
-                                <h4 style="font-size: 0.9rem; color: white; margin-bottom: 1.2rem; font-family: var(--font-mono);">PROYECTOS QUE CONSTRUIRÁS:</h4>
+                            <div class="accordion-right">
+                                <h4>PROYECTOS QUE CONSTRUIRÁS:</h4>
                                 <ul class="program-list">
                                     <li>Microapps de consumo interno para tu empresa</li>
                                     <li>Dashboards y analíticas de datos en tiempo real</li>
@@ -876,16 +886,16 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-inner">
-                            <div>
-                                <p style="color: #888; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                            <div class="accordion-left">
+                                <p class="desc">
                                     Diseña y entrena asistentes virtuales inteligentes capaces de operar en canales de mensajería las 24 horas del día.
                                 </p>
-                                <p style="color: #aaa; font-size: 1.1rem; line-height: 1.8;">
+                                <p class="desc secondary">
                                     Conecta la IA con tus bases de datos corporativas para calificar leads, automatizar respuestas complejas y cerrar ventas de forma segura y controlada.
                                 </p>
                             </div>
-                            <div>
-                                <h4 style="font-size: 0.9rem; color: white; margin-bottom: 1.2rem; font-family: var(--font-mono);">HABILIDADES CLAVE:</h4>
+                            <div class="accordion-right">
+                                <h4>HABILIDADES CLAVE:</h4>
                                 <ul class="program-list">
                                     <li>Crear chatbots conversacionales para web y WhatsApp</li>
                                     <li>Diseñar flujos de captación y cualificación de leads automáticos</li>
@@ -906,16 +916,16 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-inner">
-                            <div>
-                                <p style="color: #888; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                            <div class="accordion-left">
+                                <p class="desc">
                                     Construye arquitecturas avanzadas de inteligencia artificial conectando bloques de lógica visuales mediante sistemas Drag & Drop.
                                 </p>
-                                <p style="color: #aaa; font-size: 1.1rem; line-height: 1.8;">
+                                <p class="desc secondary">
                                     Une modelos de lenguaje, bases vectoriales y herramientas de terceros para crear sistemas RAG con memoria persistente y procesos lógicos automatizados.
                                 </p>
                             </div>
-                            <div>
-                                <h4 style="font-size: 0.9rem; color: white; margin-bottom: 1.2rem; font-family: var(--font-mono);">APLICACIONES QUE DESARROLLARÁS:</h4>
+                            <div class="accordion-right">
+                                <h4>APLICACIONES QUE DESARROLLARÁS:</h4>
                                 <ul class="program-list">
                                     <li>Flujos avanzados Drag & Drop mediante nodos lógicos</li>
                                     <li>Asistentes virtuales con gestión de memoria avanzada</li>
@@ -931,118 +941,118 @@
         </div>
     </section>
 
-    <section id="herramientas" class="section-light" style="background: #f2efe8; padding: 10rem 0; border-top: none;">
-        <div class="container" style="position: relative; z-index: 2;">
-            <div style="text-align: center; margin-bottom: 5rem;">
-                <p style="font-family: var(--font-mono); color: var(--accent-color); font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1.5rem;">ECOSISTEMA TECNOLÓGICO</p>
-                <h2 style="font-size: 3rem; line-height: 1.2;">Herramientas que <span class="text-gradient">dominarás</span></h2>
-                <p style="color: #666; max-width: 600px; margin: 1.5rem auto 0; font-size: 1.05rem;">
+    <section id="herramientas" class="section-light">
+        <div class="container relative-container">
+            <div class="section-header center-header">
+                <p class="subtitle">ECOSISTEMA TECNOLÓGICO</p>
+                <h2>Herramientas que <span class="text-gradient">dominarás</span></h2>
+                <p class="subtitle-desc">
                     Aprende a orquestar el stack de herramientas líderes en automatización y desarrollo con IA sin escribir código.
                 </p>
             </div>
             
-            <div class="bento-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div class="bento-grid tools-grid">
                 <!-- Tool 1 -->
-                <div class="bento-card tool-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start;">
-                    <img src="./Links/Google_Antigravity_Logo.png" alt="Google Antigravity Logo" style="height: 38px; width: auto; object-fit: contain; margin-bottom: 0.5rem;">
-                    <h3 style="font-size: 1.2rem; margin: 0; font-family: var(--font-heading);">Google Antigravity</h3>
-                    <p style="font-size: 0.9rem; line-height: 1.6; margin: 0;">Plataforma avanzada de creación y despliegue de software y microapps internas guiada por instrucciones en lenguaje natural.</p>
+                <div class="bento-card span-4 tool-card">
+                    <img src="./Links/Google_Antigravity_Logo.png" alt="Google Antigravity Logo" class="tool-logo">
+                    <h3>Google Antigravity</h3>
+                    <p>Plataforma avanzada de creación y despliegue de software y microapps internas guiada por instrucciones en lenguaje natural.</p>
                 </div>
 
                 <!-- Tool 2 -->
-                <div class="bento-card tool-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start;">
-                    <img src="./Links/microsoft-copilot-logo.svg" alt="Microsoft Copilot Logo" style="height: 38px; width: auto; object-fit: contain; margin-bottom: 0.5rem;">
-                    <h3 style="font-size: 1.2rem; margin: 0; font-family: var(--font-heading);">Copilot Studio</h3>
-                    <p style="font-size: 0.9rem; line-height: 1.6; margin: 0;">Entorno empresarial de Microsoft para estructurar agentes de marketing autónomos, integrables en WhatsApp y webs corporativas.</p>
+                <div class="bento-card span-4 tool-card">
+                    <img src="./Links/microsoft-copilot-logo.svg" alt="Microsoft Copilot Logo" class="tool-logo">
+                    <h3>Copilot Studio</h3>
+                    <p>Entorno empresarial de Microsoft para estructurar agentes de marketing autónomos, integrables en WhatsApp y webs corporativas.</p>
                 </div>
 
                 <!-- Tool 3 -->
-                <div class="bento-card tool-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start;">
-                    <img src="./Links/logo-flowise.png" alt="Flowise Logo" style="height: 38px; width: auto; object-fit: contain; margin-bottom: 0.5rem;">
-                    <h3 style="font-size: 1.2rem; margin: 0; font-family: var(--font-heading);">Flowise AI</h3>
-                    <p style="font-size: 0.9rem; line-height: 1.6; margin: 0;">Orquestador visual Drag & Drop para conectar LLMs con bases vectoriales, APIs y construir flujos cognitivos de memoria semántica.</p>
+                <div class="bento-card span-4 tool-card">
+                    <img src="./Links/logo-flowise.png" alt="Flowise Logo" class="tool-logo">
+                    <h3>Flowise AI</h3>
+                    <p>Orquestador visual Drag & Drop para conectar LLMs con bases vectoriales, APIs y construir flujos cognitivos de memoria semántica.</p>
                 </div>
 
                 <!-- Tool 4 -->
-                <div class="bento-card tool-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-                        <img src="./Links/vertical-align.png" alt="n8n Logo" style="height: 45px; width: auto; object-fit: contain;">
-                        <span style="color: #ccc; font-size: 1.5rem; font-weight: 300; font-family: var(--font-mono);">/</span>
-                        <img src="./Links/logo_make.svg" alt="Make Logo" style="height: 25px; width: auto; object-fit: contain;">
+                <div class="bento-card span-4 tool-card">
+                    <div class="tool-logo-row">
+                        <img src="./Links/vertical-align.png" alt="n8n Logo" class="logo-n8n">
+                        <span class="separator">/</span>
+                        <img src="./Links/logo_make.svg" alt="Make Logo" class="logo-make">
                     </div>
-                    <h3 style="font-size: 1.2rem; margin: 0; font-family: var(--font-heading);">n8n / Make</h3>
-                    <p style="font-size: 0.9rem; line-height: 1.6; margin: 0;">Motores de automatización y orquestación para interconectar aplicaciones, sincronizar bases de datos y desencadenar agentes.</p>
+                    <h3>n8n / Make</h3>
+                    <p>Motores de automatización y orquestación para interconectar aplicaciones, sincronizar bases de datos y desencadenar agentes.</p>
                 </div>
 
                 <!-- Tool 5 -->
-                <div class="bento-card tool-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start;">
-                    <div style="font-size: 2.2rem; line-height: 1; margin-bottom: 0.2rem;">🧠</div>
-                    <h3 style="font-size: 1.2rem; margin: 0; font-family: var(--font-heading);">LLMs de Vanguardia</h3>
-                    <p style="font-size: 0.9rem; line-height: 1.6; margin: 0;">Integración profunda con los modelos más avanzados de la industria (GPT-4o, Claude 3.5 Sonnet, Llama 3) como motores cognitivos.</p>
+                <div class="bento-card span-4 tool-card">
+                    <div class="tool-emoji">🧠</div>
+                    <h3>LLMs de Vanguardia</h3>
+                    <p>Integración profunda con los modelos más avanzados de la industria (GPT-4o, Claude 3.5 Sonnet, Llama 3) como motores cognitivos.</p>
                 </div>
 
                 <!-- Tool 6 -->
-                <div class="bento-card tool-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start;">
-                    <div style="font-size: 2.2rem; line-height: 1; margin-bottom: 0.2rem;">📁</div>
-                    <h3 style="font-size: 1.2rem; margin: 0; font-family: var(--font-heading);">Bases Vectoriales</h3>
-                    <p style="font-size: 0.9rem; line-height: 1.6; margin: 0;">Uso de Pinecone y ChromaDB para almacenar índices de documentos y proveer memoria a largo plazo a tus agentes.</p>
+                <div class="bento-card span-4 tool-card">
+                    <div class="tool-emoji">📁</div>
+                    <h3>Bases Vectoriales</h3>
+                    <p>Uso de Pinecone y ChromaDB para almacenar índices de documentos y proveer memoria a largo plazo a tus agentes.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="audiencia" style="background: #050505; padding: 10rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+    <section id="audiencia">
         <div class="parallax-bg" style="background-image: url('./Links/src/Recurso 4.svg');"></div>
-        <div class="container" style="position: relative; z-index: 2;">
-            <div style="text-align: center; margin-bottom: 5rem;">
-                <p style="font-family: var(--font-mono); color: var(--accent-color); font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1.5rem;">¿ES ESTO PARA TI?</p>
-                <h2 style="font-size: 3rem; line-height: 1.2;">Este curso es <span class="text-gradient">para ti si…</span></h2>
+        <div class="container relative-container">
+            <div class="section-header center-header">
+                <p class="subtitle">¿ES ESTO PARA TI?</p>
+                <h2>Este curso es <span class="text-gradient">para ti si…</span></h2>
             </div>
-            <div class="bento-grid" style="max-width: 1000px; margin: 0 auto;">
-                <div class="bento-card" style="grid-column: span 6; display: flex; align-items: flex-start; gap: 1.5rem;">
-                    <div style="color: var(--accent-color); font-size: 1.5rem; line-height: 1; font-weight: 900;">✔</div>
-                    <div>
-                        <h4 style="font-size: 1.1rem; color: white; margin-bottom: 0.5rem; font-family: var(--font-heading);">Resultados reales</h4>
-                        <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin: 0;">Quieres aplicar IA de verdad en tu empresa para automatizar operaciones de forma práctica.</p>
+            <div class="bento-grid audiencia-grid">
+                <div class="bento-card audience-card">
+                    <div class="check-icon">✔</div>
+                    <div class="content">
+                        <h4>Resultados reales</h4>
+                        <p>Quieres aplicar IA de verdad en tu empresa para automatizar operaciones de forma práctica.</p>
                     </div>
                 </div>
-                <div class="bento-card" style="grid-column: span 6; display: flex; align-items: flex-start; gap: 1.5rem;">
-                    <div style="color: var(--accent-color); font-size: 1.5rem; line-height: 1; font-weight: 900;">✔</div>
-                    <div>
-                        <h4 style="font-size: 1.1rem; color: white; margin-bottom: 0.5rem; font-family: var(--font-heading);">Ahorro de recursos</h4>
-                        <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin: 0;">Buscas automatizar tareas, eliminar procesos manuales lentos y optimizar el tiempo de tu equipo.</p>
+                <div class="bento-card audience-card">
+                    <div class="check-icon">✔</div>
+                    <div class="content">
+                        <h4>Ahorro de recursos</h4>
+                        <p>Buscas automatizar tareas, eliminar procesos manuales lentos y optimizar el tiempo de tu equipo.</p>
                     </div>
                 </div>
-                <div class="bento-card" style="grid-column: span 6; display: flex; align-items: flex-start; gap: 1.5rem;">
-                    <div style="color: var(--accent-color); font-size: 1.5rem; line-height: 1; font-weight: 900;">✔</div>
-                    <div>
-                        <h4 style="font-size: 1.1rem; color: white; margin-bottom: 0.5rem; font-family: var(--font-heading);">Autonomía tecnológica</h4>
-                        <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin: 0;">Quieres crear soluciones propias, webs y flujos inteligentes sin depender de programadores externos.</p>
+                <div class="bento-card audience-card">
+                    <div class="check-icon">✔</div>
+                    <div class="content">
+                        <h4>Autonomía tecnológica</h4>
+                        <p>Quieres crear soluciones propias, webs y flujos inteligentes sin depender de programadores externos.</p>
                     </div>
                 </div>
-                <div class="bento-card" style="grid-column: span 6; display: flex; align-items: flex-start; gap: 1.5rem;">
-                    <div style="color: var(--accent-color); font-size: 1.5rem; line-height: 1; font-weight: 900;">✔</div>
-                    <div>
-                        <h4 style="font-size: 1.1rem; color: white; margin-bottom: 0.5rem; font-family: var(--font-heading);">Liderazgo e Innovación</h4>
-                        <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin: 0;">Necesitas adaptarte de inmediato al nuevo entorno digital y liderar la transformación en tu sector.</p>
+                <div class="bento-card audience-card">
+                    <div class="check-icon">✔</div>
+                    <div class="content">
+                        <h4>Liderazgo e Innovación</h4>
+                        <p>Necesitas adaptarte de inmediato al nuevo entorno digital y liderar la transformación en tu sector.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="agenda" class="section-light" style="background: #f2efe8; padding: 10rem 0;">
-        <div class="container" style="position: relative; z-index: 2;">
+    <section id="agenda" class="section-light">
+        <div class="container relative-container">
 
             <!-- Header -->
-            <div style="text-align: center; margin-bottom: 5rem;">
-                <p style="font-family: var(--font-mono); color: var(--accent-color); font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1.5rem;">CONVOCATORIA</p>
-                <h2 style="font-size: 3.5rem; line-height: 1;">Julio <span class="text-gradient">2026</span></h2>
-                <p style="color: #666; margin-top: 1.5rem; font-size: 1.05rem; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.7;">Cuatro sesiones intensivas. Haz clic en los días marcados para ver qué aprenderás.</p>
+            <div class="section-header center-header">
+                <p class="subtitle">CONVOCATORIA</p>
+                <h2>Julio <span class="text-gradient">2026</span></h2>
+                <p class="subtitle-desc">Cuatro sesiones intensivas. Haz clic en los días marcados para ver qué aprenderás.</p>
             </div>
 
             <!-- Calendar + Detail layout -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; max-width: 1100px; margin: 0 auto;">
+            <div class="agenda-layout-grid">
 
                 <!-- Calendar -->
                 <div class="cal-wrap">
@@ -1079,10 +1089,10 @@
                         <div class="cal-day">20</div>
                         <div class="cal-day">21</div>
                         <div class="cal-day cal-session" data-session="3" tabindex="0" role="button" aria-label="Sesión 3 – 22 de julio">22</div>
-                        <div class="cal-day">23</div>
+                        <div class="cal-day cal-session" data-session="4" tabindex="0" role="button" aria-label="Sesión 4 – 23 de julio">23</div>
                         <div class="cal-day">24</div>
                         <div class="cal-day">25</div>
-                        <div class="cal-day cal-session" data-session="4" tabindex="0" role="button" aria-label="Sesión 4 – 23 de julio">23</div>
+                        <div class="cal-day">26</div>
                         <div class="cal-day">27</div>
                         <div class="cal-day">28</div>
                         <div class="cal-day">29</div>
@@ -1093,13 +1103,13 @@
                         <div class="cal-day empty"></div>
                     </div>
                     <!-- Legend -->
-                    <div style="display: flex; align-items: center; gap: 2rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.08);">
-                        <div style="display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.75rem; color: #666;">
-                            <span style="width: 22px; height: 22px; background: var(--accent-color); border-radius: 6px; display: inline-block;"></span>
+                    <div class="cal-legend">
+                        <div class="legend-item">
+                            <span class="color-box scheduled"></span>
                             Sesión programada
                         </div>
-                        <div style="display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.75rem; color: #666;">
-                            <span style="width: 22px; height: 22px; background: rgba(0,0,0,0.06); border-radius: 6px; display: inline-block;"></span>
+                        <div class="legend-item">
+                            <span class="color-box free"></span>
                             Día libre
                         </div>
                     </div>
@@ -1109,8 +1119,8 @@
                 <div class="cal-detail-wrap">
                     <!-- Default empty state -->
                     <div class="cal-detail-empty" id="cal-empty">
-                        <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;">📅</div>
-                        <p style="font-family: var(--font-mono); font-size: 0.85rem; color: #999; text-align: center; line-height: 1.6;">Haz clic en un día<br>marcado para ver<br>el contenido</p>
+                        <div class="empty-emoji">📅</div>
+                        <p class="empty-text">Haz clic en un día<br>marcado para ver<br>el contenido</p>
                     </div>
 
                     <!-- Session 1 -->
@@ -1167,7 +1177,7 @@
                             <li>Integración con n8n, Make y Zapier</li>
                             <li>Proyecto final: automatización real de tu empresa</li>
                         </ul>
-                        <a href="#registro" class="btn btn-primary" style="margin-top: 2rem; width: 100%; text-align: center;">Reservar mi plaza →</a>
+                        <a href="#registro" class="btn btn-primary cal-detail-btn">Reservar mi plaza →</a>
                     </div>
                 </div>
 
@@ -1175,9 +1185,9 @@
         </div>
     </section>
 
-    <footer style="padding: 6rem 0 4rem; border-top: 1px solid var(--border-color); text-align: center; background: #000;">
+    <footer>
         <div class="container">
-            <img src="./Links/src/logo_enae.svg" alt="ENAE Business School" style="height: 42px; margin-bottom: 2.5rem; opacity: 0.8;">
+            <img src="./Links/src/logo_enae.svg" alt="ENAE Business School" class="footer-logo">
             
             <div class="footer-social">
                 <a href="https://www.instagram.com/enaebusiness/#" target="_blank" aria-label="Instagram">
@@ -1203,12 +1213,12 @@
                 <a href="https://www.enae.es/politica-de-privacidad" target="_blank">Política de privacidad</a>
             </div>
 
-            <p style="color: #444; font-size: 0.75rem; margin-top: 2rem; font-family: var(--font-mono);">© 2026 ENAE Business School. Todos los derechos reservados.</p>
+            <p class="footer-copyright">© 2026 ENAE Business School. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js?v=2"></script>
     <script>
         // ── Calendar interactivity ─────────────────────────────────────────
         (function () {
