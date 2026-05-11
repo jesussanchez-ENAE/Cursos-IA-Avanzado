@@ -1,5 +1,5 @@
 # Manual de Diseño del Proyecto: La Fábrica de Agentes
-Este documento resume y especifica las directrices de diseño, tokens visuales, componentes y patrones estéticos de la landing page de **La Fábrica de Agentes** de ENAE Business School.
+Este documento resume y especifica las directrices de diseño, tokens visuales, componentes, patrones estéticos y el sistema adaptativo responsivo de la landing page de **La Fábrica de Agentes** de ENAE Business School.
 
 ---
 
@@ -120,22 +120,31 @@ Para evitar tener que duplicar marcado o clases utilitarias, se desarrolló una 
 
 ---
 
-## 5. Componentes Clave de UI
+## 5. Componentes Clave de UI y Adaptabilidad Responsiva
 
-### A. Bento Grid de Última Generación
-Estructuras de diseño en grilla de 12 columnas (`.bento-grid`) que alojan tarjetas interactivas de esquinas redondeadas (`border-radius: 1.5rem`).
-- **Efecto Hover Dinámico:** Las tarjetas escuchan el movimiento del cursor mediante JavaScript para proyectar una iluminación radial sutil (`::before` con gradiente radial usando las variables CSS de cursor `var(--mouse-x)` y `var(--mouse-y)`).
+Para mantener la estética premium en móviles, la landing page evita layouts inline fijos y utiliza clases CSS responsivas:
 
-### B. Accordion de Programa (Efecto Timeline)
-El programa utiliza un sistema interactivo tipo acordeón con números monoespaciados que se activan suavemente:
-- **Encabezado:** Compuesto por un número de paso mono (`.num`) de gran visibilidad y un texto principal en un tono gris translúcido que cambia a blanco (u oscuro en `.section-light`) al expandirse.
-- **Transición:** `max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1)` para un despliegue orgánico de los contenidos.
+### A. Barra de Navegación y Menú Hamburguesa
+- **Trigger Interactivo (`.nav-toggle`):** Compuesto por tres barras horizontales (`.hamburger-bar`) que giran y cambian de forma fluida. Se activa de forma táctil en móviles.
+- **Contenedor Móvil (`.nav-links.active`):** En anchos menores de `768px`, la barra de navegación se oculta para convertirse en un panel lateral interactivo con efecto de desenfoque de fondo (`backdrop-filter: blur(20px)`), activado suavemente mediante JS.
 
-### C. Botones Premium ENAE (`.btn`)
-- **Fórmula de diseño:** Esquinas totalmente redondeadas (`border-radius: 100px`), textos en mayúsculas, fuente geométrica gruesa y un sutil desplazamiento al pasar el ratón por encima (`transform: translateY(-3px)`).
-- El botón principal (`.btn-primary`) cuenta con un sombreado con halo carmesí (`box-shadow: 0 10px 30px var(--accent-glow)`) que aumenta al activarse.
+### B. Bento Grid Adaptable
+- **Estructura base:** Rejilla de 12 columnas que aloja tarjetas de esquinas redondeadas (`border-radius: 1.5rem`) con efecto de iluminación de cursor radial (`::before` con coordenadas CSS mouse).
+- **Apilamiento Móvil:** Mediante la regla `.bento-card { grid-column: span 12 !important; }` a nivel móvil, todas las tarjetas Bento que tengan distribuciones de columnas inline en escritorio (`span 6`, `span 7`, etc.) colapsan de manera segura y elegante a una columna, sin desbordarse lateralmente.
 
-### D. Formulario de Registro con Sello FUNDAE
+### C. Contenedor Hero Responsivo (`.hero-container`)
+- **Desktop:** Grilla asimétrica balanceada con `grid-template-columns: 1.2fr 0.8fr` y una amplia separación de `6rem` que da aire y legibilidad al título y al formulario.
+- **Móvil/Tablet (<1024px):** La clase `.hero-container` transiciona a un diseño vertical apilado de una sola columna (`grid-template-columns: 1fr`) centrando todo el contenido tipográfico de forma fluida.
+- **Botoneras (`.hero-buttons`):** Agrupa los botones principales del Hero. Bajo `768px` cambia a un orden vertical (`flex-direction: column`) adaptando las llamadas a la acción al 100% del ancho del dispositivo para optimizar las pulsaciones táctiles.
+
+### D. Acordeón de Programa (Efecto Timeline)
+- **Estructura:** Títulos grandes (`2.2rem`) y números destacados que al desplegarse abren el contenido con una transición fluida.
+- **Móvil:** La clase contenedora `.accordion-inner` conmuta de grilla de dos columnas a una sola columna (`grid-template-columns: 1fr !important`), reduciendo el tamaño del gatillo tipográfico a `1.4rem` para evitar líneas cortadas.
+
+### E. Métrica Mini-Cards Adaptativa (`.metric-bento-card`)
+- Las tarjetas contenedoras de métricas de tres columnas se adaptan dinámicamente mediante variables CSS (`var(--metric-cols)`). En pantallas menores de `600px`, la grilla cambia a `1fr` obligando a las tres métricas (ahorro, errores, escalabilidad) a apilarse con gran legibilidad tipográfica.
+
+### F. Formulario de Registro con Sello FUNDAE
 - **Fondo:** Tarjeta translúcida con difuminado de fondo (`backdrop-filter: blur(20px)`).
 - **Badge FUNDAE:** Diseñado con un gradiente ámbar/dorado exclusivo (`rgba(212,166,0,0.1)`) y un borde fino a juego. El logo se estiliza dinámicamente mediante filtros CSS (`brightness(2) sepia(1) hue-rotate(5deg) saturate(2)`) para mantener un look dorado corporativo.
 - **Mensaje de Urgencia:** Texto en dorado brillante bajo el badge: `⚠ PLAZAS LIMITADAS POR CONVOCATORIA`.
@@ -146,9 +155,13 @@ El programa utiliza un sistema interactivo tipo acordeón con números monoespac
 
 La sección `#agenda` contiene un calendario mensual completamente interactivo que sustituye a las listas de fechas estáticas convencionales.
 
+### Maquetación Responsiva (`.agenda-layout-grid`):
+- **Desktop:** Grilla de dos columnas simétricas (`1fr 1fr`) con `4rem` de separación que permite ver el calendario al lado izquierdo y la tarjeta de detalle a la derecha.
+- **Móvil/Tablet:** Se apila automáticamente en una columna (`1fr`) con espacio intermedio de `3rem` para una lectura vertical ágil de arriba (calendario) hacia abajo (panel de descripción del día).
+
 ### Diseño del Calendario:
 - **Estructura:** Grilla de 7 columnas que muestra los días de la semana y la distribución de los días del mes de julio de 2026 de forma limpia.
-- **Resaltado de Días Clave (Sesiones 15, 16, 22 y 26):**
+- **Resaltado de Días Clave (Sesiones 15, 16, 22 y 23):**
   - Fondo de acento carmesí (`var(--accent-color)`).
   - Texto en blanco, subrayado discreto, y un efecto de elevación al pasar el cursor (`transform: scale(1.15)`).
 - **Panel de Detalles:** Tarjeta lateral que se inicializa en estado vacío solicitando al usuario clicar un día. Al seleccionar un día del calendario, la información se despliega con una animación fluida de entrada (`opacity` y `translateY` controlado por `@keyframes calDetailIn`).
@@ -160,6 +173,7 @@ La sección `#agenda` contiene un calendario mensual completamente interactivo q
 
 Si se añaden nuevas secciones o componentes, es crucial seguir estas reglas para asegurar la coherencia estética de la landing:
 1. **Tipografías:** Usar estrictamente las fuentes cargadas en `fonts.css`. No usar fuentes de sistema para elementos destacados.
-2. **Espaciados:** Los márgenes de las secciones deben ser generosos, idealmente `padding: 10rem 0` o `padding: 12rem 0` para un look moderno con suficiente aire.
-3. **Imágenes:** Si se requiere incluir logos o assets, envolverlos en componentes que tengan un tema claro definido o usar filtros CSS para adaptarlos (por ejemplo, pasándolos a escala de grises o invirtiéndolos en fondos oscuros).
+2. **Espaciados:** Los márgenes de las secciones deben ser generosos, idealmente `padding: 10rem 0` o `padding: 12rem 0` para un look moderno con suficiente aire. En móviles, estos deben escalar automáticamente a `padding: 6rem 0` a través de las media queries existentes.
+3. **Imágenes y Logos:** Si se requiere incluir logos o assets, envolverlos en componentes que tengan un tema claro definido o usar filtros CSS para adaptarlos (por ejemplo, pasándolos a escala de grises o invirtiéndolos en fondos oscuros).
 4. **Interactividad:** Todas las transiciones de hover deben utilizar la curva de aceleración configurada en `--transition`. Evitar transiciones directas instantáneas sin suavizado.
+5. **Estilos Responsivos:** **Nunca utilizar anchos o grillas inline fijas** sin antes ligarlas a una variable CSS dinámica o una clase que soporte conmutación en las consultas de medios móviles de `index.css`.
