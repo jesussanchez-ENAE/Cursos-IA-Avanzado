@@ -567,9 +567,9 @@
     <header class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
-                    <span style="width: 40px; height: 1px; background: var(--accent-color);"></span>
-                    <span style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--accent-color); letter-spacing: 0.2em;">PROGRAMA AVANZADO DE IA</span>
+                <div style="display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.4rem 1.2rem; background: rgba(168, 23, 48, 0.1); border: 1px solid rgba(168, 23, 48, 0.35); border-radius: 100px; margin-bottom: 2rem; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); box-shadow: 0 4px 15px rgba(168, 23, 48, 0.15); width: fit-content;">
+                    <span style="width: 6px; height: 6px; background: var(--accent-color); border-radius: 50%; display: inline-block; box-shadow: 0 0 8px var(--accent-color);"></span>
+                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #fff; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase;">PROGRAMA INTERMEDIO DE IA</span>
                 </div>
                 <h1 style="font-size: 5.5rem; line-height: 0.9; margin-bottom: 2rem; font-weight: 900;">
                     LA FÁBRICA <br>
@@ -1176,6 +1176,54 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section id="enae-prestigio" style="background: #000000; padding: 10rem 0; border-top: 1px solid rgba(255,255,255,0.05); position: relative;">
+        <div style="position: absolute; bottom: 0; right: -10%; width: 40%; height: 40%; background: radial-gradient(circle, rgba(168,23,48,0.02), transparent); pointer-events: none;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <p style="font-family: var(--font-mono); color: var(--accent-color); font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1.5rem; text-transform: uppercase;">GARANTÍA ACADÉMICA Y PRESTIGIO</p>
+                <h2 style="font-size: 3rem; line-height: 1.2;">Reconocimiento <span class="text-gradient">Internacional</span></h2>
+                <p style="color: #888; max-width: 600px; margin: 1.5rem auto 0; font-size: 1.05rem; line-height: 1.7;">
+                    ENAE Business School está posicionada en los rankings más exigentes del mundo, garantizando una formación ejecutiva del más alto nivel.
+                </p>
+            </div>
+            
+            <div class="bento-grid" style="max-width: 1100px; margin: 0 auto;">
+                <!-- Ranking 1: El Mundo -->
+                <div class="bento-card span-4" style="padding: 3rem 2rem; text-align: center; display: flex; flex-direction: column; justify-content: space-between; align-items: center; min-height: 320px; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.04);">
+                    <div style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <img src="./Links/Rankings/logo_ElMundo.png" alt="Ranking El Mundo" style="max-height: 100%; max-width: 180px; object-fit: contain; filter: grayscale(1) opacity(0.85); transition: var(--transition);" onmouseover="this.style.filter='none'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(1) opacity(0.85)';">
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 0.75rem; font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 900;">Diario El Mundo</h3>
+                        <p style="color: #888; font-size: 0.9rem; line-height: 1.7; margin: 0;">Reconocidos entre los mejores de España: posicionados en el <strong>2º puesto de International Trade</strong> y en el <strong>4º puesto de Agronegocios</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Ranking 2: Forbes -->
+                <div class="bento-card span-4" style="padding: 3rem 2rem; text-align: center; display: flex; flex-direction: column; justify-content: space-between; align-items: center; min-height: 320px; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.04);">
+                    <div style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <img src="./Links/Rankings/logo_Forbes.png" alt="Ranking Forbes" style="max-height: 100%; max-width: 180px; object-fit: contain; filter: grayscale(1) opacity(0.85); transition: var(--transition);" onmouseover="this.style.filter='none'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(1) opacity(0.85)';">
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 0.75rem; font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 900;">Forbes España</h3>
+                        <p style="color: #888; font-size: 0.9rem; line-height: 1.7; margin: 0;">Reconocida entre las mejores escuelas de negocios de España, avalando el excelente impacto profesional e inserción de nuestros graduados.</p>
+                    </div>
+                </div>
+
+                <!-- Ranking 3: QS -->
+                <div class="bento-card span-4" style="padding: 3rem 2rem; text-align: center; display: flex; flex-direction: column; justify-content: space-between; align-items: center; min-height: 320px; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.04);">
+                    <div style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <img src="./Links/Rankings/logo_QS.png" alt="Ranking QS Stars" style="max-height: 100%; max-width: 180px; object-fit: contain; filter: grayscale(1) opacity(0.85); transition: var(--transition);" onmouseover="this.style.filter='none'; this.style.opacity='1';" onmouseout="this.style.filter='grayscale(1) opacity(0.85)';">
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 0.75rem; font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 900;">QS Stars Rating</h3>
+                        <p style="color: #888; font-size: 0.9rem; line-height: 1.7; margin: 0;">Acreditación internacional QS Stars que certifica con la máxima puntuación nuestra excelencia en empleabilidad, docencia y recursos.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
